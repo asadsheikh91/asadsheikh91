@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="408" height="300" viewBox="0 0 408 300" role="img" aria-labelledby="t d">
+<title id="t">Veriloom: BUILT, NOT YET DEPLOYED</title>
+<desc id="d">Veriloom. Sole engineer. Hiring by real work, with an AI interview that catches outsourced submissions. An LLM grades real deliverables. A follow-up interview keyed to their own submission. A person sees both scores and decides. Stack: Next.js, TypeScript, Express, Prisma, PostgreSQL, Clerk, Cloudflare R2.</desc>
+<defs>
+  <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8b7cff"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
+  <linearGradient id="brandV" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8b7cff"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
+  <linearGradient id="card" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#171730"/><stop offset="1" stop-color="#0e0e1c"/></linearGradient>
+  <filter id="blur40" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="40"/></filter>
+  <filter id="blur20" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="20"/></filter>
+  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <clipPath id="clip"><rect width="408" height="300" rx="16"/></clipPath>
+  
+  <linearGradient id="nm" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#f472b6"/></linearGradient>
+  <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fbbf24"/><stop offset="1" stop-color="#f472b6"/></linearGradient>
+</defs>
+<style>
+  text{text-rendering:geometricPrecision}
+  @media (prefers-reduced-motion: reduce){*{animation:none !important}}
+
+  .g1{animation:g1 11s ease-in-out infinite}
+  .g2{animation:g2 13s ease-in-out infinite}
+  @keyframes g1{0%,100%{transform:translate(0,0)}50%{transform:translate(50px,30px)}}
+  @keyframes g2{0%,100%{transform:translate(0,0)}50%{transform:translate(-50px,-24px)}}
+  .dot{animation:blink 1.6s ease-in-out infinite}
+  @keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+</style>
+<g clip-path="url(#clip)">
+<rect width="408" height="300" fill="#0a0a14"/>
+
+  <rect width="408" height="300" fill="#0a0a14"/>
+  
+  <circle class="g1" cx="48.96" cy="20" r="110" fill="#fbbf24" opacity=".28" filter="url(#blur40)"/>
+  <circle class="g2" cx="387.59999999999997" cy="300" r="100" fill="#f472b6" opacity=".2" filter="url(#blur40)"/>
+  <rect width="408" height="300" fill="url(#card)" opacity=".55"/>
+  <rect x="22" y="22" width="169" height="24" rx="12" fill="#fbbf2422" stroke="#fbbf2466"/><text x="106.5" y="37.675" font-size="10.5" fill="#fbbf24" font-weight="600" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="middle" opacity="1">BUILT, NOT YET DEPLOYED</text>
+  <text x="22" y="78" font-size="29" fill="url(#nm)" font-weight="800" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">Veriloom</text>
+  <text x="203" y="38" font-size="11" fill="#6d6b8f" font-weight="400" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="start" opacity="1">Sole engineer</text>
+  <text x="22" y="108.0" font-size="13.2" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">Hiring by real work, with an AI interview that</text><text x="22" y="126.7" font-size="13.2" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">catches outsourced submissions.</text>
+  <circle cx="28" cy="153.488" r="3" fill="#fbbf24"/><text x="40" y="157.5" font-size="12" fill="#eceaff" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">An LLM grades real deliverables</text><circle cx="28" cy="174.688" r="3" fill="#f472b6"/><text x="40" y="178.7" font-size="12" fill="#eceaff" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">A follow-up interview keyed to their own submission</text><circle cx="28" cy="195.88799999999998" r="3" fill="#fbbf24"/><text x="40" y="199.9" font-size="12" fill="#eceaff" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">A person sees both scores and decides</text>
+  <rect x="22" y="234" width="58" height="22" rx="11" fill="#ffffff0d" stroke="#ffffff1f"/><text x="51" y="248.675" font-size="10.5" fill="#a09ec0" font-weight="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="middle" opacity="1">Next.js</text><rect x="86" y="234" width="75" height="22" rx="11" fill="#ffffff0d" stroke="#ffffff1f"/><text x="123.5" y="248.675" font-size="10.5" fill="#a09ec0" font-weight="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="middle" opacity="1">TypeScript</text><rect x="167" y="234" width="58" height="22" rx="11" fill="#ffffff0d" stroke="#ffffff1f"/><text x="196" y="248.675" font-size="10.5" fill="#a09ec0" font-weight="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="middle" opacity="1">Express</text><rect x="231" y="234" width="53" height="22" rx="11" fill="#ffffff0d" stroke="#ffffff1f"/><text x="257.5" y="248.675" font-size="10.5" fill="#a09ec0" font-weight="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="middle" opacity="1">Prisma</text><rect x="290" y="234" width="75" height="22" rx="11" fill="#ffffff0d" stroke="#ffffff1f"/><text x="327.5" y="248.675" font-size="10.5" fill="#a09ec0" font-weight="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="middle" opacity="1">PostgreSQL</text><rect x="22" y="262" width="47" height="22" rx="11" fill="#ffffff0d" stroke="#ffffff1f"/><text x="45.5" y="276.675" font-size="10.5" fill="#a09ec0" font-weight="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="middle" opacity="1">Clerk</text>
+  <rect x="0" y="0" width="408" height="3" fill="url(#bar)"/>
+
+</g>
+<rect x=".5" y=".5" width="407" height="299" rx="16" fill="none" stroke="#ffffff1a"/>
+</svg>

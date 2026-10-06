@@ -1,0 +1,14 @@
+{
+  "name": "asadsheikh91-profile",
+  "private": true,
+  "type": "module",
+  "description": "Source for the asadsheikh91 GitHub profile README. No dependencies.",
+  "scripts": {
+    "build": "node scripts/build-art.mjs",
+    "live": "node scripts/update-live.mjs",
+    "live:offline": "node scripts/update-live.mjs --render-only",
+    "metadata": "node scripts/apply-repo-metadata.mjs",
+    "all": "node scripts/build-art.mjs && node scripts/update-live.mjs"
+  },
+  "engines": { "node": ">=20" }
+}

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="408" height="300" viewBox="0 0 408 300" role="img" aria-labelledby="t d">
+<title id="t">Cascade: PERSONAL PROJECT, SIMULATED</title>
+<desc id="d">Cascade. Sole engineer. A payments backend built around the failure cases. A timeout is not a decline. A retry can never double-charge a customer. Over-refunds blocked by the database itself. 45 tests in CI, on a real PostgreSQL. Stack: C#, .NET, PostgreSQL, Stripe, Shopify, Docker, GitHub Actions.</desc>
+<defs>
+  <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8b7cff"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
+  <linearGradient id="brandV" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8b7cff"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
+  <linearGradient id="card" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#171730"/><stop offset="1" stop-color="#0e0e1c"/></linearGradient>
+  <filter id="blur40" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="40"/></filter>
+  <filter id="blur20" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="20"/></filter>
+  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <clipPath id="clip"><rect width="408" height="300" rx="16"/></clipPath>
+  
+  <linearGradient id="nm" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#34d399"/></linearGradient>
+  <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#34d399"/></linearGradient>
+</defs>
+<style>
+  text{text-rendering:geometricPrecision}
+  @media (prefers-reduced-motion: reduce){*{animation:none !important}}
+
+  .g1{animation:g1 11s ease-in-out infinite}
+  .g2{animation:g2 13s ease-in-out infinite}
+  @keyframes g1{0%,100%{transform:translate(0,0)}50%{transform:translate(50px,30px)}}
+  @keyframes g2{0%,100%{transform:translate(0,0)}50%{transform:translate(-50px,-24px)}}
+  .dot{animation:blink 1.6s ease-in-out infinite}
+  @keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+</style>
+<g clip-path="url(#clip)">
+<rect width="408" height="300" fill="#0a0a14"/>
+
+  <rect width="408" height="300" fill="#0a0a14"/>
+  
+  <circle class="g1" cx="48.96" cy="20" r="110" fill="#22d3ee" opacity=".28" filter="url(#blur40)"/>
+  <circle class="g2" cx="387.59999999999997" cy="300" r="100" fill="#34d399" opacity=".2" filter="url(#blur40)"/>
+  <rect width="408" height="300" fill="url(#card)" opacity=".55"/>
+  <rect x="22" y="22" width="195" height="24" rx="12" fill="#22d3ee22" stroke="#22d3ee66"/><text x="119.5" y="37.675" font-size="10.5" fill="#22d3ee" font-weight="600" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="middle" opacity="1">PERSONAL PROJECT, SIMULATED</text>
+  <text x="22" y="78" font-size="29" fill="url(#nm)" font-weight="800" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">Cascade</text>
+  <text x="229" y="38" font-size="11" fill="#6d6b8f" font-weight="400" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="start" opacity="1">Sole engineer</text>
+  <text x="22" y="108.0" font-size="13.2" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">A payments backend built around the failure cases.</text><text x="22" y="126.7" font-size="13.2" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">A timeout is not a decline.</text>
+  <circle cx="28" cy="153.488" r="3" fill="#22d3ee"/><text x="40" y="157.5" font-size="12" fill="#eceaff" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">A retry can never double-charge a customer</text><circle cx="28" cy="174.688" r="3" fill="#34d399"/><text x="40" y="178.7" font-size="12" fill="#eceaff" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">Over-refunds blocked by the database itself</text><circle cx="28" cy="195.88799999999998" r="3" fill="#22d3ee"/><text x="40" y="199.9" font-size="12" fill="#eceaff" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">45 tests in CI, on a real PostgreSQL</text>
+  <rect x="22" y="234" width="30" height="22" rx="11" fill="#ffffff0d" stroke="#ffffff1f"/><text x="37" y="248.675" font-size="10.5" fill="#a09ec0" font-weight="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="middle" opacity="1">C#</text><rect x="58" y="234" width="41" height="22" rx="11" fill="#ffffff0d" stroke="#ffffff1f"/><text x="78.5" y="248.675" font-size="10.5" fill="#a09ec0" font-weight="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="middle" opacity="1">.NET</text><rect x="105" y="234" width="75" height="22" rx="11" fill="#ffffff0d" stroke="#ffffff1f"/><text x="142.5" y="248.675" font-size="10.5" fill="#a09ec0" font-weight="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="middle" opacity="1">PostgreSQL</text><rect x="186" y="234" width="53" height="22" rx="11" fill="#ffffff0d" stroke="#ffffff1f"/><text x="212.5" y="248.675" font-size="10.5" fill="#a09ec0" font-weight="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="middle" opacity="1">Stripe</text><rect x="245" y="234" width="58" height="22" rx="11" fill="#ffffff0d" stroke="#ffffff1f"/><text x="274" y="248.675" font-size="10.5" fill="#a09ec0" font-weight="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="middle" opacity="1">Shopify</text><rect x="309" y="234" width="53" height="22" rx="11" fill="#ffffff0d" stroke="#ffffff1f"/><text x="335.5" y="248.675" font-size="10.5" fill="#a09ec0" font-weight="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="middle" opacity="1">Docker</text>
+  <rect x="0" y="0" width="408" height="3" fill="url(#bar)"/>
+
+</g>
+<rect x=".5" y=".5" width="407" height="299" rx="16" fill="none" stroke="#ffffff1a"/>
+</svg>

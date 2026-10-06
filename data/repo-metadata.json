@@ -1,0 +1,30 @@
+{
+  "owner": "asadsheikh91",
+  "_note": "Descriptions say what each repo honestly is. Edit freely, then run scripts/apply-repo-metadata.mjs.",
+  "repos": [
+    {
+      "name": "cascade-payments",
+      "description": "A payments backend built around the failure cases: a provider timeout is not a decline. C#, .NET, PostgreSQL, Stripe and Shopify. Runs on simulated data.",
+      "homepage": "https://asadamadsh.me/work/cascade",
+      "topics": ["dotnet", "csharp", "postgresql", "payments", "idempotency", "webhooks", "stripe", "shopify", "testcontainers", "architecture-decision-records"]
+    },
+    {
+      "name": "vehicle-watch",
+      "description": "Fleet fault detection with no labelled data. Isolation Forest and Local Outlier Factor score every sensor reading, Gemini explains each anomaly. FastAPI, PostgreSQL, Redis. Demo data.",
+      "homepage": "https://asadamadsh.me/work/vehiclewatch",
+      "topics": ["fastapi", "anomaly-detection", "scikit-learn", "isolation-forest", "postgresql", "redis", "iot", "gemini"]
+    },
+    {
+      "name": "VeriLoom",
+      "description": "Hiring by real work. An LLM grades submitted deliverables, then an AI interview keyed to the candidate's own submission tests understanding. Built, not yet deployed.",
+      "homepage": "https://asadamadsh.me/work/veriloom",
+      "topics": ["nextjs", "typescript", "prisma", "postgresql", "clerk", "llm", "hiring"]
+    },
+    {
+      "name": "influence",
+      "description": "InfluencePay: escrow-backed influencer deals. A Solidity escrow contract, an Express API and a Next.js frontend. Client project, delivered. Runs on the Sepolia test network.",
+      "homepage": "https://asadamadsh.me/work/influencepay",
+      "topics": ["solidity", "ethereum", "escrow", "hardhat", "nextjs", "express", "prisma", "postgresql"]
+    }
+  ]
+}

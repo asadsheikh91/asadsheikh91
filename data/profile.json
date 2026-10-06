@@ -1,0 +1,417 @@
+{
+  "_about": "Single source of truth for every fact on this profile. Every value comes from asadamadsh.me, the CV, or the public repos. If it is not checkable, it does not go in here. No em dashes anywhere.",
+  "handle": "asadsheikh91",
+  "name": "Asad Amad Sheikh",
+  "title": "Full Stack Engineer",
+  "location": "Islamabad, Pakistan",
+  "utcOffset": 5,
+  "links": {
+    "site": "https://asadamadsh.me",
+    "about": "https://asadamadsh.me/about",
+    "notes": "https://asadamadsh.me/notes",
+    "cv": "https://asadamadsh.me/cv.pdf",
+    "book": "https://cal.com/asad-amad-rvz7vg",
+    "linkedin": "https://linkedin.com/in/asadamadsheikh",
+    "email": "mailto:asadamad91@gmail.com",
+    "parchivisa": "https://parchivisa.app"
+  },
+  "hoursPkt": {
+    "start": 17,
+    "end": 3
+  },
+  "firstProject": "about one week",
+  "process": [
+    "A live preview from week one and a written update every week.",
+    "Code, accounts and keys live in your own GitHub and cloud from day one.",
+    "Two weeks of fixes after launch are included in the quoted price."
+  ],
+  "numbers": [
+    {
+      "value": "6 weeks",
+      "label": "from idea to production, ParchiVisa, alone"
+    },
+    {
+      "value": "4",
+      "label": "country eligibility engines running live"
+    },
+    {
+      "value": "300+",
+      "label": "government fleet vehicles on the telemetry layer I built"
+    },
+    {
+      "value": "30 min to <1 min",
+      "label": "reporting latency after my Frontier Works pipelines"
+    },
+    {
+      "value": "45",
+      "label": "tests on a real PostgreSQL in Cascade's CI"
+    },
+    {
+      "value": "1 of 45",
+      "label": "interns, and the only one given a Certificate of Appreciation"
+    }
+  ],
+  "projects": [
+    {
+      "slug": "parchivisa",
+      "name": "ParchiVisa",
+      "badge": "LIVE PRODUCT, FOUNDER",
+      "live": true,
+      "role": "Founder and sole engineer",
+      "pitch": "An AI visa-readiness check for students. Designed, built and shipped alone in six weeks.",
+      "highlights": [
+        "Four country engines: UK, Australia, Canada, USA",
+        "An LLM writes the report, fixed rules decide the verdict",
+        "Intake, scoring, PDF and payment live on one deploy"
+      ],
+      "stack": [
+        "Next.js",
+        "TypeScript",
+        "FastAPI",
+        "PostgreSQL",
+        "Redis",
+        "Clerk",
+        "Cloudflare",
+        "AWS Lightsail",
+        "Sentry"
+      ],
+      "tint": [
+        "#8b7cff",
+        "#22d3ee"
+      ],
+      "site": "https://asadamadsh.me/work/parchivisa",
+      "product": "https://parchivisa.app",
+      "repo": null
+    },
+    {
+      "slug": "influencepay",
+      "name": "InfluencePay",
+      "badge": "CLIENT PROJECT, TESTNET",
+      "role": "Sole engineer",
+      "pitch": "Influencer deals where the budget sits in a smart contract, not in anyone's bank account.",
+      "highlights": [
+        "Delivered and accepted by the client",
+        "Budget locked in escrow before work starts",
+        "Disputes hold the money until release or refund"
+      ],
+      "stack": [
+        "Solidity",
+        "Ethereum",
+        "Next.js",
+        "Express",
+        "Prisma",
+        "PostgreSQL"
+      ],
+      "tint": [
+        "#f472b6",
+        "#8b7cff"
+      ],
+      "site": "https://asadamadsh.me/work/influencepay",
+      "repo": "https://github.com/asadsheikh91/influence"
+    },
+    {
+      "slug": "cascade",
+      "name": "Cascade",
+      "badge": "PERSONAL PROJECT, SIMULATED",
+      "role": "Sole engineer",
+      "pitch": "A payments backend built around the failure cases. A timeout is not a decline.",
+      "highlights": [
+        "A retry can never double-charge a customer",
+        "Over-refunds blocked by the database itself",
+        "45 tests in CI, on a real PostgreSQL"
+      ],
+      "stack": [
+        "C#",
+        ".NET",
+        "PostgreSQL",
+        "Stripe",
+        "Shopify",
+        "Docker",
+        "GitHub Actions"
+      ],
+      "tint": [
+        "#22d3ee",
+        "#34d399"
+      ],
+      "site": "https://asadamadsh.me/work/cascade",
+      "repo": "https://github.com/asadsheikh91/cascade-payments"
+    },
+    {
+      "slug": "vehiclewatch",
+      "name": "VehicleWatch",
+      "badge": "SOLE ENGINEER, DEMO DATA",
+      "role": "Sole engineer",
+      "pitch": "Fleet fault detection with no labelled data. It learns what normal looks like.",
+      "highlights": [
+        "Scores every sensor reading in under 100 ms",
+        "Two anomaly models that fail in different ways",
+        "Gemini explains each anomaly in plain English"
+      ],
+      "stack": [
+        "FastAPI",
+        "PostgreSQL",
+        "Redis",
+        "scikit-learn",
+        "Gemini",
+        "Docker"
+      ],
+      "tint": [
+        "#34d399",
+        "#22d3ee"
+      ],
+      "site": "https://asadamadsh.me/work/vehiclewatch",
+      "repo": "https://github.com/asadsheikh91/vehicle-watch"
+    },
+    {
+      "slug": "veriloom",
+      "name": "Veriloom",
+      "badge": "BUILT, NOT YET DEPLOYED",
+      "role": "Sole engineer",
+      "pitch": "Hiring by real work, with an AI interview that catches outsourced submissions.",
+      "highlights": [
+        "An LLM grades real deliverables",
+        "A follow-up interview keyed to their own submission",
+        "A person sees both scores and decides"
+      ],
+      "stack": [
+        "Next.js",
+        "TypeScript",
+        "Express",
+        "Prisma",
+        "PostgreSQL",
+        "Clerk",
+        "Cloudflare R2"
+      ],
+      "tint": [
+        "#fbbf24",
+        "#f472b6"
+      ],
+      "site": "https://asadamadsh.me/work/veriloom",
+      "repo": "https://github.com/asadsheikh91/VeriLoom"
+    }
+  ],
+  "stackGroups": [
+    {
+      "label": "Languages",
+      "pills": [
+        "TypeScript",
+        "JavaScript",
+        "Python",
+        "C#",
+        "SQL",
+        "Solidity",
+        "Java"
+      ]
+    },
+    {
+      "label": "Frontend",
+      "pills": [
+        "React",
+        "Next.js",
+        "Tailwind CSS",
+        "Playwright PDFs"
+      ]
+    },
+    {
+      "label": "Backend",
+      "pills": [
+        "FastAPI",
+        "ASP.NET Core",
+        "EF Core",
+        "Node.js",
+        "Express",
+        "Prisma",
+        "SQLAlchemy",
+        "Pydantic v2",
+        "OpenAPI",
+        "Background workers"
+      ]
+    },
+    {
+      "label": "AI",
+      "pills": [
+        "Claude API",
+        "Gemini API",
+        "Retrieval over structured corpora",
+        "Structured output",
+        "Evaluation sets",
+        "scikit-learn"
+      ]
+    },
+    {
+      "label": "Payments",
+      "pills": [
+        "Stripe",
+        "Shopify webhooks",
+        "Shopify GraphQL Admin API",
+        "Idempotency keys",
+        "Webhook signature checks",
+        "Transactional inbox"
+      ]
+    },
+    {
+      "label": "Data",
+      "pills": [
+        "PostgreSQL",
+        "Redis",
+        "Alembic",
+        "Schema design",
+        "Query optimisation"
+      ]
+    },
+    {
+      "label": "Infrastructure",
+      "pills": [
+        "Docker",
+        "GitHub Actions",
+        "Nginx",
+        "AWS EC2/RDS/S3",
+        "Cloudflare",
+        "Linux",
+        "DigitalOcean",
+        "Render"
+      ]
+    },
+    {
+      "label": "Security",
+      "pills": [
+        "Clerk",
+        "JWT",
+        "RBAC",
+        "Rate limiting",
+        "Runtime secret injection",
+        "Audit logging"
+      ]
+    },
+    {
+      "label": "Testing",
+      "pills": [
+        "xUnit",
+        "Testcontainers",
+        "pytest",
+        "schemathesis",
+        "Locust",
+        "Playwright",
+        "ruff and mypy in CI"
+      ]
+    }
+  ],
+  "principles": [
+    {
+      "project": "ParchiVisa",
+      "first": "Weight every criterion and add them up.",
+      "then": "A strong profile with one long unexplained gap came out as a pass. A caseworker would reject it on the gap alone.",
+      "chose": "One hard blocker caps the band, whatever the total. The rules live as data.",
+      "note": "band-capping-scoring"
+    },
+    {
+      "project": "Cascade",
+      "first": "Treat a provider timeout as a decline.",
+      "then": "A timeout does not say whether the card was charged. Decline it and the customer may pay twice.",
+      "chose": "A timeout is an unknown. Save the attempt first and send its id as the idempotency key.",
+      "note": "timeout-is-not-a-decline"
+    },
+    {
+      "project": "VehicleWatch",
+      "first": "Train a classifier on labelled faults.",
+      "then": "Nobody labels the readings. There was nothing to train on.",
+      "chose": "Learn what normal looks like. Isolation Forest and LOF together, because they fail differently.",
+      "note": "unlabelled-fault-detection"
+    },
+    {
+      "project": "Frontier Works",
+      "first": "Go after the slow queries.",
+      "then": "The query plans were fine. The requests were waiting for a connection from a drained pool.",
+      "chose": "Bound the queries, resize the pool, fail fast. Same peak load, no timeouts.",
+      "note": "connection-pool-timeouts"
+    }
+  ],
+  "career": {
+    "_note": "Ranges are exactly as stated on the CV. Repo dates are first commits on GitHub, not product launch dates. ParchiVisa says 2026 to now, so its start is drawn as a fade, not a month.",
+    "axis": {
+      "from": "2022-01",
+      "to": "2026-12"
+    },
+    "bars": [
+      {
+        "lane": "learn",
+        "from": "2022-01",
+        "to": "2026-06",
+        "fadeStart": true,
+        "label": "B.S. Computer Science",
+        "sub": "FAST NUCES, Islamabad. Graduated June 2026"
+      },
+      {
+        "lane": "work",
+        "from": "2024-06",
+        "to": "2024-08",
+        "label": "Data Engineering Intern",
+        "sub": "Ufone, PTCL Group"
+      },
+      {
+        "lane": "work",
+        "from": "2025-06",
+        "to": "2025-08",
+        "label": "Backend Engineering Intern",
+        "sub": "Frontier Works Organization"
+      },
+      {
+        "lane": "work",
+        "from": "2026-01",
+        "to": "2026-10",
+        "fadeStart": true,
+        "open": true,
+        "label": "Founder, ParchiVisa",
+        "sub": "2026 to now"
+      }
+    ],
+    "dots": [
+      {
+        "when": "2026-03",
+        "label": "Veriloom",
+        "sub": "first commit"
+      },
+      {
+        "when": "2026-04",
+        "label": "VehicleWatch",
+        "sub": "first commit"
+      },
+      {
+        "when": "2026-05",
+        "label": "InfluencePay",
+        "sub": "first commit"
+      },
+      {
+        "when": "2026-09",
+        "label": "Cascade",
+        "sub": "first commit"
+      }
+    ],
+    "callouts": [
+      {
+        "when": "2024-07",
+        "text": "80 tables, ~670 GB compliance dataset, silent data loss found and fixed"
+      },
+      {
+        "when": "2025-07",
+        "text": "300+ vehicles. Reporting 30 min to under 1 min. Sole award among 45 interns"
+      }
+    ]
+  },
+  "featuredRepos": [
+    "cascade-payments",
+    "vehicle-watch",
+    "VeriLoom",
+    "influence"
+  ],
+  "languageRepoFilter": {
+    "vehicle-watch": [
+      "Python",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Dockerfile",
+      "Shell"
+    ]
+  }
+}
