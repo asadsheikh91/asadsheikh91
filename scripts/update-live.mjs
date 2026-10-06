@@ -3,9 +3,10 @@
 //   node scripts/update-live.mjs               fetch fresh data, write data/live.json, render
 //   node scripts/update-live.mjs --render-only re-render from data/live.json (no network)
 //
-// Data sources, in order of preference for the contribution calendar:
-//   1. GraphQL contributionsCollection, when GITHUB_TOKEN is set (the workflow sets it)
-//   2. The public contributions page, parsed (what any visitor sees)
+// Data sources for the contribution calendar, in order of preference:
+//   1. The public contributions page, parsed: exactly what any visitor sees on the profile.
+//   2. GraphQL contributionsCollection with GITHUB_TOKEN, only if the page fails. The page is
+//      preferred because it is what visitors see, so the card can never disagree with the profile.
 // If every source fails the existing SVGs are left alone: a stale card beats an empty one.
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
 import { join, dirname } from "node:path";
@@ -34,30 +35,7 @@ async function api(path) {
 
 // ---------------------------------------------------------------- data
 
-async function fetchCalendar() {
-  if (token) {
-    try {
-      const res = await fetch("https://api.github.com/graphql", {
-        method: "POST",
-        headers,
-        body: JSON.stringify({
-          query: `query($login:String!){user(login:$login){contributionsCollection{contributionCalendar{totalContributions weeks{contributionDays{date contributionCount contributionLevel}}}}}}`,
-          variables: { login: handle },
-        }),
-      });
-      const j = await res.json();
-      const cal = j?.data?.user?.contributionsCollection?.contributionCalendar;
-      if (cal) {
-        const levels = { NONE: 0, FIRST_QUARTILE: 1, SECOND_QUARTILE: 2, THIRD_QUARTILE: 3, FOURTH_QUARTILE: 4 };
-        return {
-          source: "graphql",
-          days: cal.weeks.flatMap((w) => w.contributionDays).map((d) => ({ date: d.date, count: d.contributionCount, level: levels[d.contributionLevel] ?? 0 })),
-        };
-      }
-    } catch (e) {
-      console.warn("GraphQL calendar failed, falling back to the public page:", e.message);
-    }
-  }
+async function fetchCalendarFromPage() {
   const res = await fetch(`https://github.com/users/${handle}/contributions`, { headers: { "User-Agent": "Mozilla/5.0" } });
   if (!res.ok) throw new Error(`contributions page: ${res.status}`);
   const html = await res.text();
@@ -74,6 +52,35 @@ async function fetchCalendar() {
     .sort((a, b) => a.date.localeCompare(b.date));
   if (days.length < 300) throw new Error(`contributions page parsed ${days.length} days, expected about 365`);
   return { source: "html", days };
+}
+
+async function fetchCalendarFromGraphql() {
+  if (!token) throw new Error("no GITHUB_TOKEN for the GraphQL fallback");
+  const res = await fetch("https://api.github.com/graphql", {
+    method: "POST",
+    headers,
+    body: JSON.stringify({
+      query: `query($login:String!){user(login:$login){contributionsCollection{contributionCalendar{totalContributions weeks{contributionDays{date contributionCount contributionLevel}}}}}}`,
+      variables: { login: handle },
+    }),
+  });
+  const j = await res.json();
+  const cal = j?.data?.user?.contributionsCollection?.contributionCalendar;
+  if (!cal) throw new Error("GraphQL returned no calendar");
+  const levels = { NONE: 0, FIRST_QUARTILE: 1, SECOND_QUARTILE: 2, THIRD_QUARTILE: 3, FOURTH_QUARTILE: 4 };
+  return {
+    source: "graphql",
+    days: cal.weeks.flatMap((w) => w.contributionDays).map((d) => ({ date: d.date, count: d.contributionCount, level: levels[d.contributionLevel] ?? 0 })),
+  };
+}
+
+async function fetchCalendar() {
+  try {
+    return await fetchCalendarFromPage();
+  } catch (e) {
+    console.warn("Public page failed, trying GraphQL:", e.message);
+    return fetchCalendarFromGraphql();
+  }
 }
 
 async function fetchRepos() {
