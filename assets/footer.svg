@@ -2,34 +2,25 @@
 <title id="t">Contact</title>
 <desc id="d">If you have a system to ship, let us talk. Book a 15 minute call, visit asadamadsh.me, or email asadamad91@gmail.com.</desc>
 <defs>
-  <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8b7cff"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
-  <linearGradient id="brandV" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8b7cff"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
-  <linearGradient id="card" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#171730"/><stop offset="1" stop-color="#0e0e1c"/></linearGradient>
-  <filter id="blur40" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="40"/></filter>
-  <filter id="blur20" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="20"/></filter>
-  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-  <clipPath id="clip"><rect width="830" height="170" rx="18"/></clipPath>
+  <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#b8431f"/><stop offset="1" stop-color="#b8431f"/></linearGradient>
+  <linearGradient id="card" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbf8f1"/><stop offset="1" stop-color="#fbf8f1"/></linearGradient>
+  <filter id="glow"><feMerge><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <clipPath id="clip"><rect width="830" height="170" rx="6"/></clipPath>
   
 </defs>
 <style>
-  text{text-rendering:geometricPrecision}
+  text{text-rendering:optimizeLegibility}
   @media (prefers-reduced-motion: reduce){*{animation:none !important}}
-
-    .w1{animation:wv1 9s ease-in-out infinite}
-    .w2{animation:wv2 12s ease-in-out infinite}
-    @keyframes wv1{0%,100%{transform:translateX(0)}50%{transform:translateX(-60px)}}
-    @keyframes wv2{0%,100%{transform:translateX(-40px)}50%{transform:translateX(20px)}}
-  </style>
+</style>
 <g clip-path="url(#clip)">
-<rect width="830" height="170" fill="#0a0a14"/>
+<rect width="830" height="170" fill="#f3eee3"/>
 
-  <rect width="830" height="170" fill="#0a0a14"/>
-  <g class="w1"><path d="M-120 146 L-120 137.3 L-110 137.0 L-100 137.0 L-90 137.2 L-80 137.6 L-70 138.1 L-60 138.9 L-50 139.8 L-40 140.9 L-30 142.1 L-20 143.3 L-10 144.6 L0 146.0 L10 147.4 L20 148.7 L30 149.9 L40 151.1 L50 152.2 L60 153.1 L70 153.9 L80 154.4 L90 154.8 L100 155.0 L110 155.0 L120 154.7 L130 154.3 L140 153.7 L150 152.9 L160 151.9 L170 150.8 L180 149.6 L190 148.4 L200 147.0 L210 145.7 L220 144.3 L230 143.0 L240 141.7 L250 140.6 L260 139.6 L270 138.7 L280 138.0 L290 137.5 L300 137.1 L310 137.0 L320 137.1 L330 137.4 L340 137.8 L350 138.5 L360 139.3 L370 140.3 L380 141.5 L390 142.7 L400 144.0 L410 145.3 L420 146.7 L430 148.0 L440 149.3 L450 150.5 L460 151.7 L470 152.7 L480 153.5 L490 154.2 L500 154.6 L510 154.9 L520 155.0 L530 154.9 L540 154.5 L550 154.0 L560 153.3 L570 152.4 L580 151.4 L590 150.3 L600 149.0 L610 147.7 L620 146.3 L630 145.0 L640 143.6 L650 142.4 L660 141.2 L670 140.1 L680 139.1 L690 138.3 L700 137.7 L710 137.3 L720 137.0 L730 137.0 L740 137.2 L750 137.6 L760 138.1 L770 138.9 L780 139.8 L790 140.9 L800 142.1 L810 143.3 L820 144.6 L830 146.0 L840 147.4 L850 148.7 L860 149.9 L870 151.1 L880 152.2 L890 153.1 L900 153.9 L910 154.4 L920 154.8 L930 155.0 L940 155.0 L950 154.7 L950 170 L-120 170 Z" fill="#8b7cff" opacity=".16"/></g>
-  <g class="w2"><path d="M-120 152 L-120 153.5 L-110 154.6 L-100 155.7 L-90 156.8 L-80 157.7 L-70 158.5 L-60 159.1 L-50 159.6 L-40 159.9 L-30 160.0 L-20 159.9 L-10 159.7 L0 159.3 L10 158.7 L20 158.0 L30 157.1 L40 156.1 L50 155.0 L60 153.8 L70 152.7 L80 151.4 L90 150.2 L100 149.1 L110 148.0 L120 147.0 L130 146.1 L140 145.4 L150 144.8 L160 144.3 L170 144.1 L180 144.0 L190 144.1 L200 144.4 L210 144.9 L220 145.5 L230 146.3 L240 147.2 L250 148.2 L260 149.3 L270 150.4 L280 151.6 L290 152.9 L300 154.0 L310 155.2 L320 156.3 L330 157.2 L340 158.1 L350 158.8 L360 159.4 L370 159.7 L380 160.0 L390 160.0 L400 159.8 L410 159.5 L420 159.0 L430 158.3 L440 157.5 L450 156.6 L460 155.6 L470 154.4 L480 153.3 L490 152.0 L500 150.8 L510 149.7 L520 148.5 L530 147.5 L540 146.5 L550 145.7 L560 145.0 L570 144.5 L580 144.2 L590 144.0 L600 144.0 L610 144.2 L620 144.6 L630 145.1 L640 145.9 L650 146.7 L660 147.7 L670 148.7 L680 149.9 L690 151.0 L700 152.3 L710 153.5 L720 154.6 L730 155.7 L740 156.8 L750 157.7 L760 158.5 L770 159.1 L780 159.6 L790 159.9 L800 160.0 L810 159.9 L820 159.7 L830 159.3 L840 158.7 L850 158.0 L860 157.1 L870 156.1 L880 155.0 L890 153.8 L900 152.7 L910 151.4 L920 150.2 L930 149.1 L940 148.0 L950 147.0 L950 170 L-120 170 Z" fill="#22d3ee" opacity=".14"/></g>
-  <text x="28" y="52" font-size="24" fill="#eceaff" font-weight="800" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">If you have a system to ship, let us talk.</text>
-  <text x="28" y="78" font-size="13.5" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">First project: about one week. Priced after the intro call, by scope.</text>
-  <rect x="28" y="96" width="178" height="32" rx="16" fill="#8b7cff33" stroke="#8b7cff99"/><text x="117" y="116.375" font-size="12.5" fill="#eceaff" font-weight="700" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="middle" opacity="1">Book a 15 minute call</text><rect x="216" y="96" width="124" height="32" rx="16" fill="#ffffff12" stroke="#ffffff22"/><text x="278" y="116.375" font-size="12.5" fill="#eceaff" font-weight="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="middle" opacity="1">asadamadsh.me</text><rect x="350" y="96" width="171" height="32" rx="16" fill="#ffffff12" stroke="#ffffff22"/><text x="435.5" y="116.375" font-size="12.5" fill="#eceaff" font-weight="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="middle" opacity="1">asadamad91@gmail.com</text>
+  <line x1="28" x2="802" y1="22" y2="22" stroke="#1d1c1a" stroke-width="3"/>
+  <line x1="28" x2="802" y1="28" y2="28" stroke="#1d1c1a" stroke-width="1"/>
+  <text x="28" y="66" font-size="26" fill="#1d1c1a" font-weight="700" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1">If you have a system to ship, let us talk.</text>
+  <text x="28" y="88" font-size="13.5" fill="#554f45" font-weight="400" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1" font-style="italic">First project: about one week. Priced after the intro call, by scope.</text>
+  <rect x="28" y="100" width="199" height="34" rx="4" fill="#b8431f" stroke="#b8431f"/><text x="127.5" y="121.55" font-size="13" fill="#fbf8f1" font-weight="700" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="middle" opacity="1">Book a 15 minute call</text><rect x="237" y="100" width="132" height="34" rx="4" fill="none" stroke="#1d1c1a40"/><text x="303" y="121.55" font-size="13" fill="#1d1c1a" font-weight="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="middle" opacity="1">asadamadsh.me</text><rect x="379" y="100" width="181" height="34" rx="4" fill="none" stroke="#1d1c1a40"/><text x="469.5" y="121.55" font-size="13" fill="#1d1c1a" font-weight="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="middle" opacity="1">asadamad91@gmail.com</text>
 
 </g>
-<rect x=".5" y=".5" width="829" height="169" rx="18" fill="none" stroke="#ffffff1a"/>
+<rect x=".5" y=".5" width="829" height="169" rx="6" fill="none" stroke="#d6ccb8"/>
 </svg>

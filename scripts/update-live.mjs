@@ -162,7 +162,7 @@ function activitySvg(live) {
   const cell = (w - left * 2 - (weeks.length - 1) * gap) / weeks.length;
   const gy = 64;
   const gridH = 7 * cell + 6 * gap;
-  const levelFill = ["#ffffff0f", "#4c3fb3", "#6c5ce7", "#4aa3f0", C.cyan];
+  const levelFill = ["#1d1c1a12", "#e6c3ad", "#d98f68", "#c15a30", "#8c2d10"];
 
   let cells = "";
   weeks.forEach((wk, ci) => {
@@ -188,10 +188,10 @@ function activitySvg(live) {
   });
 
   const tiles = [
-    { v: String(s.total), l: "public contributions, last 12 months", c: C.violet },
-    { v: String(s.activeDays), l: "days with activity", c: C.cyan },
+    { v: String(s.total), l: "public contributions, last 12 months", c: C.blue },
+    { v: String(s.activeDays), l: "days with activity", c: C.rust },
     { v: s.busiest ? fmtMonth(s.busiest[0] + "-01").replace(" 20", " '") : "n/a", l: s.busiest ? `busiest month, ${s.busiest[1]} contributions` : "", c: C.green },
-    { v: s.last ? fmtDate(s.last.date) : "n/a", l: "latest contribution", c: C.amber },
+    { v: s.last ? fmtDate(s.last.date) : "n/a", l: "latest contribution", c: C.ochre },
   ];
   const ty = gy + gridH + 34;
   const tw = (w - left * 2 - 3 * 12) / 4;
@@ -199,7 +199,7 @@ function activitySvg(live) {
     .map((k, i) => {
       const x = left + i * (tw + 12);
       const lab = lines(k.l, x + 16, ty + 58, { fs: 10.5, maxPx: tw - 32, fill: C.muted, lh: 1.3 });
-      return `<rect x="${x}" y="${ty}" width="${tw}" height="82" rx="12" fill="url(#card)" stroke="${k.c}" stroke-opacity=".35"/>${t(k.v, x + 16, ty + 36, { fs: k.v.length > 9 ? 17 : 26, weight: 800, fill: k.c })}${lab.svg}`;
+      return `<rect x="${x}" y="${ty}" width="${tw}" height="82" rx="4" fill="url(#card)" stroke="${C.line}"/>${t(k.v, x + 16, ty + 36, { fs: k.v.length > 9 ? 17 : 26, weight: 800, fill: k.c })}${lab.svg}`;
     })
     .join("");
 
@@ -224,7 +224,6 @@ function activitySvg(live) {
     desc: `${s.total} public contributions on ${s.activeDays} days in the last 12 months.${s.busiest ? ` Busiest month ${fmtMonth(s.busiest[0] + "-01")}.` : ""}${s.last ? ` Latest contribution ${fmtDate(s.last.date)}.` : ""}`,
     body,
     css,
-    radius: 16,
   });
 }
 
@@ -240,12 +239,12 @@ function shippingSvg(live) {
       const y = top + i * rowH;
       const lc = LANG_COLORS[r.language] || C.dim;
       return `
-  <rect x="24" y="${y}" width="${w - 48}" height="${rowH - 8}" rx="10" fill="#ffffff08" stroke="#ffffff12"/>
+  <rect x="24" y="${y}" width="${w - 48}" height="${rowH - 8}" rx="3" fill="url(#card)" stroke="${C.line}"/>
   <circle cx="46" cy="${y + (rowH - 8) / 2}" r="5" fill="${lc}"/>
   ${t(r.name, 62, y + 24, { fs: 14, weight: 700, fill: C.text })}
   ${t(r.language || "n/a", 318, y + 24, { fs: 12, mono: true, fill: C.muted })}
   ${t(`first commit ${new Date(r.created).toLocaleDateString("en-GB", { month: "short", year: "numeric", timeZone: "UTC" })}`, 450, y + 24, { fs: 12, mono: true, fill: C.dim })}
-  ${t(`last push ${fmtDate(r.pushed)}`, w - 40, y + 24, { fs: 12, mono: true, fill: C.cyan, anchor: "end" })}`;
+  ${t(`last push ${fmtDate(r.pushed)}`, w - 40, y + 24, { fs: 12, mono: true, fill: C.rust, anchor: "end" })}`;
     })
     .join("");
   return doc({
@@ -254,7 +253,6 @@ function shippingSvg(live) {
     title: "Featured repositories",
     desc: rows.map((r) => `${r.name}, ${r.language || "no language"}, last push ${fmtDate(r.pushed)}`).join(". "),
     body: `${t("Featured public repositories, newest push first", 24, 34, { fs: 17, weight: 800, fill: C.text })}${body}${t("Straight from the GitHub API. Dates are first commit month and latest push.", 24, h - 14, { fs: 9.5, mono: true, fill: C.dim })}`,
-    radius: 16,
   });
 }
 
@@ -294,7 +292,6 @@ function languagesSvg(live) {
     desc: top.map(([k, v]) => `${k} ${(v * 100).toFixed(1)} percent`).join(", "),
     body: `${t("Languages across featured repos, each repo weighted equally", 24, 34, { fs: 17, weight: 800, fill: C.text })}${segs}${legend}${t("Straight from the GitHub API. Dependencies and generated code are excluded.", 24, h - 14, { fs: 9.5, mono: true, fill: C.dim })}`,
     css: `.seg{transform-box:fill-box;transform-origin:left;animation:grow 1.2s ease-out both}@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}`,
-    radius: 16,
   });
 }
 

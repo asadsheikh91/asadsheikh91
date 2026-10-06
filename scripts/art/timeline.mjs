@@ -28,8 +28,8 @@ export function timeline(p) {
 
   const work = tl.bars.filter((b) => b.lane === "work");
   const cards = [
-    { bar: work[0], x: 250, w: 186, title: "Data Engineering Intern", sub: "Ufone (PTCL Group), Jun to Aug 2024", body: "80 tables. A ~670 GB compliance dataset. Found and fixed silent data loss.", c: C.violet },
-    { bar: work[1], x: 446, w: 186, title: "Backend Engineering Intern", sub: "Frontier Works, Jun to Aug 2025", body: "300+ vehicles. Reporting from 30 min to under 1. The only award among 45 interns.", c: C.cyan },
+    { bar: work[0], x: 250, w: 186, title: "Data Engineering Intern", sub: "Ufone (PTCL Group), Jun to Aug 2024", body: "80 tables. A ~670 GB compliance dataset. Found and fixed silent data loss.", c: C.blue },
+    { bar: work[1], x: 446, w: 186, title: "Backend Engineering Intern", sub: "Frontier Works, Jun to Aug 2025", body: "300+ vehicles. Reporting from 30 min to under 1. The only award among 45 interns.", c: C.rust },
     { bar: work[2], x: 642, w: 168, title: "Founder, ParchiVisa", sub: "2026 to now", body: "Live product. Selected for League of Launchers S2.", c: C.green },
   ];
   const cardY = 14;
@@ -49,16 +49,16 @@ export function timeline(p) {
       return `
   <defs><linearGradient id="fade${i}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="${c.c}" stop-opacity=".05"/><stop offset=".35" stop-color="${c.c}"/><stop offset="1" stop-color="${c.c}"/></linearGradient></defs>
   <path d="M${mid} ${cardY + cardH} L${mid} 212" stroke="${c.c}" stroke-opacity=".6" stroke-dasharray="3 4"/>
-  <rect x="${c.x}" y="${cardY}" width="${c.w}" height="${cardH}" rx="14" fill="url(#card)" stroke="${c.c}" stroke-opacity=".45"/>
+  <rect x="${c.x}" y="${cardY}" width="${c.w}" height="${cardH}" rx="4" fill="url(#card)" stroke="${C.line}"/>
   <rect x="${c.x}" y="${cardY}" width="${c.w}" height="3" rx="1.5" fill="${c.c}"/>
   ${title.svg}${sub.svg}${body.svg}
-  <rect x="${bx}" y="212" width="${bx2 - bx}" height="22" rx="8" fill="${fill}" ${b.open ? `class="open"` : ""}/>`;
+  <rect x="${bx}" y="212" width="${bx2 - bx}" height="22" rx="3" fill="${fill}" ${b.open ? `class="open"` : ""}/>`;
     })
     .join("");
 
   const years = [2022, 2023, 2024, 2025, 2026];
   const ticks = years
-    .map((y) => `<line x1="${X(`${y}-01`)}" y1="${axisY - 6}" x2="${X(`${y}-01`)}" y2="${axisY + 6}" stroke="#ffffff55"/>${t(String(y), X(`${y}-01`), axisY + 24, { fs: 11, mono: true, fill: C.dim, anchor: "middle" })}`)
+    .map((y) => `<line x1="${X(`${y}-01`)}" y1="${axisY - 6}" x2="${X(`${y}-01`)}" y2="${axisY + 6}" stroke="#1d1c1a55"/>${t(String(y), X(`${y}-01`), axisY + 24, { fs: 11, mono: true, fill: C.dim, anchor: "middle" })}`)
     .join("");
 
   // 2026 inset.
@@ -68,11 +68,11 @@ export function timeline(p) {
   const IX = (month) => ix0 + (month - 0.5) * mw; // month 1..12, centred
   const bandY = 360;
   const inset = [
-    { m: 3, name: "Veriloom", dot: C.pink, y: 326 },
-    { m: 4, name: "VehicleWatch", dot: C.pink, y: 344 },
-    { m: 5, name: "InfluencePay", dot: C.pink, y: 326 },
-    { m: 6, name: "Graduated", dot: C.amber, y: 344 },
-    { m: 9, name: "Cascade", dot: C.pink, y: 326 },
+    { m: 3, name: "Veriloom", dot: C.plum, y: 326 },
+    { m: 4, name: "VehicleWatch", dot: C.plum, y: 344 },
+    { m: 5, name: "InfluencePay", dot: C.plum, y: 326 },
+    { m: 6, name: "Graduated", dot: C.ochre, y: 344 },
+    { m: 9, name: "Cascade", dot: C.plum, y: 326 },
   ];
   const insetSvg = inset
     .map((d) => {
@@ -85,23 +85,23 @@ export function timeline(p) {
     .join("");
   const monthLabels = MONTHS.map((m, i) => t(m, IX(i + 1), bandY + 34, { fs: 10, mono: true, fill: C.dim, anchor: "middle" })).join("");
   const nowX = ix0 + (9 + 6 / 31) * mw; // 6 October
-  const now = `<line class="now" x1="${nowX}" y1="${bandY - 14}" x2="${nowX}" y2="${bandY + 20}" stroke="${C.cyan}" stroke-width="1.5"/>${t("today", nowX, bandY - 20, { fs: 9.5, mono: true, fill: C.cyan, anchor: "middle" })}`;
+  const now = `<line class="now" x1="${nowX}" y1="${bandY - 14}" x2="${nowX}" y2="${bandY + 20}" stroke="${C.rust}" stroke-width="1.5"/>${t("today", nowX, bandY - 20, { fs: 9.5, mono: true, fill: C.rust, anchor: "middle" })}`;
 
   const body = `
   ${grid.body}
-  <line x1="${x0}" y1="${axisY}" x2="${x1}" y2="${axisY}" stroke="#ffffff33" stroke-width="2"/>
+  <line x1="${x0}" y1="${axisY}" x2="${x1}" y2="${axisY}" stroke="#1d1c1a33" stroke-width="2"/>
   ${eduBand}
   ${workSvg}
   ${ticks}
-  <line x1="24" x2="${w - 24}" y1="290" y2="290" stroke="#ffffff14"/>
-  ${t("2026, MONTH BY MONTH", 24, 306, { fs: 10.5, mono: true, fill: C.cyan, ls: 2 })}
+  <line x1="24" x2="${w - 24}" y1="290" y2="290" stroke="#1d1c1a14"/>
+  ${t("2026, month by month", 24, 309, { fs: 16, italic: true, fill: C.rust, font: "serif", weight: 700 })}
   <rect class="open" x="${ix0}" y="${bandY}" width="${nowX - ix0}" height="8" rx="4" fill="url(#pbG)"/>
   ${t("ParchiVisa, 2026 to now", ix0, bandY + 56, { fs: 11, weight: 700, fill: C.green })}
   ${t("(start month not stated, so the bar fades in)", ix0 + textWidth("ParchiVisa, 2026 to now", 11, { bold: true }) + 10, bandY + 56, { fs: 10, mono: true, fill: C.dim })}
   ${monthLabels}
   ${insetSvg}
   ${now}
-  ${t("Pink dots are the first commit of each public repo, not a launch date.", 24, h - 14, { fs: 10, mono: true, fill: C.dim })}
+  ${t("Plum dots are the first commit of each public repo, not a launch date.", 24, h - 14, { fs: 10, mono: true, fill: C.dim })}
 `;
   const css = `
     .open{animation:op 3s ease-in-out infinite}
@@ -109,8 +109,8 @@ export function timeline(p) {
     .now{animation:nw 1.8s ease-in-out infinite}
     @keyframes nw{0%,100%{opacity:1}50%{opacity:.35}}
   `;
-  const defs = `<linearGradient id="eduG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="${C.violet}" stop-opacity=".08"/><stop offset=".3" stop-color="${C.violet}"/><stop offset="1" stop-color="${C.cyan}"/></linearGradient>
-<linearGradient id="pbG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="${C.green}" stop-opacity=".08"/><stop offset=".25" stop-color="${C.green}"/><stop offset="1" stop-color="${C.cyan}"/></linearGradient>${grid.defs}`;
+  const defs = `<linearGradient id="eduG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="${C.blue}" stop-opacity=".08"/><stop offset=".3" stop-color="${C.blue}"/><stop offset="1" stop-color="${C.blue}"/></linearGradient>
+<linearGradient id="pbG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="${C.green}" stop-opacity=".08"/><stop offset=".25" stop-color="${C.green}"/><stop offset="1" stop-color="${C.green}"/></linearGradient>${grid.defs}`;
   return doc({
     w,
     h,

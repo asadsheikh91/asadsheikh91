@@ -1,113 +1,99 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="830" height="624" viewBox="0 0 830 624" role="img" aria-labelledby="t d">
+<svg xmlns="http://www.w3.org/2000/svg" width="830" height="656" viewBox="0 0 830 656" role="img" aria-labelledby="t d">
 <title id="t">How I ship a system, in eight steps</title>
-<desc id="d">01 Validate: Talk to users and build a scoring prototype before a full build. Receipt: ParchiVisa: validated first, then live in six weeks. 02 Model: Schema and rules first. Business rules live as data, not code branches. Receipt: Four country engines run on rules kept as data. 03 Build: One thin slice, end to end, before anything gets polished. Receipt: ParchiVisa intake, scoring, PDF and payment run with no manual steps. 04 Break: Write the failure cases early: timeouts, duplicates, retries, over-refunds. Receipt: Cascade: 45 tests, integration tests on a real PostgreSQL. 05 Ship: Docker, CI, one deploy. A live preview from week one, weekly written updates. Receipt: Cascade: Docker plus CI on GitHub Actions. 06 Run: Monitor it, fix it fast. As sole engineer, nobody else to hand a failure to. Receipt: ParchiVisa: AWS Lightsail behind Cloudflare, watched by Sentry. 07 Hand over: Code, accounts and keys sit in your own GitHub and cloud from day one. Receipt: Two weeks of fixes after launch are in the quoted price. 08 Write it down: Say what the project does not do yet, in public, next to what it does. Receipt: Every case study on my site has an Honest limits section.</desc>
+<desc id="d">01 Validate: Talk to users and build a scoring prototype before a full build. Receipt: ParchiVisa: validated first, then live in six weeks. 02 Model: Schema and rules first. Business rules live as data, not code branches. Receipt: Four country engines run on rules kept as data. 03 Build: One thin slice, end to end, before anything gets polished. Receipt: ParchiVisa intake, scoring, PDF and payment run with no manual steps. 04 Break: Write the failure cases early: timeouts, duplicates, retries, over-refunds. Receipt: Cascade: 45 tests, integration tests on a real PostgreSQL. 05 Ship: Docker, CI, one deploy. A live preview from week one, weekly written updates. Receipt: Cascade: Docker plus CI on GitHub Actions. 06 Run: Monitor it and fix it fast. As sole engineer, there is no one to hand off to. Receipt: ParchiVisa: AWS Lightsail behind Cloudflare, watched by Sentry. 07 Hand over: Code, accounts and keys sit in your own GitHub and cloud from day one. Receipt: Two weeks of fixes after launch are in the quoted price. 08 Write it down: Say what the project does not do yet, in public, next to what it does. Receipt: Every case study on my site has an Honest limits section.</desc>
 <defs>
-  <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8b7cff"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
-  <linearGradient id="brandV" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8b7cff"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
-  <linearGradient id="card" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#171730"/><stop offset="1" stop-color="#0e0e1c"/></linearGradient>
-  <filter id="blur40" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="40"/></filter>
-  <filter id="blur20" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="20"/></filter>
-  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-  <clipPath id="clip"><rect width="830" height="624" rx="18"/></clipPath>
-  <pattern id="sl" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1" fill="#ffffff" opacity="0.35"/></pattern>
-<radialGradient id="slfade" cx=".5" cy=".5" r=".75"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#000"/></radialGradient>
-<mask id="slmask"><rect width="830" height="624" fill="url(#slfade)"/></mask>
+  <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#b8431f"/><stop offset="1" stop-color="#b8431f"/></linearGradient>
+  <linearGradient id="card" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbf8f1"/><stop offset="1" stop-color="#fbf8f1"/></linearGradient>
+  <filter id="glow"><feMerge><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <clipPath id="clip"><rect width="830" height="656" rx="6"/></clipPath>
+  
 </defs>
 <style>
-  text{text-rendering:geometricPrecision}
+  text{text-rendering:optimizeLegibility}
   @media (prefers-reduced-motion: reduce){*{animation:none !important}}
 
-    .track{stroke-dasharray:4 9;animation:run 1.6s linear infinite}
-    @keyframes run{to{stroke-dashoffset:-26}}
+    .track{stroke-dasharray:3 7;animation:run 2s linear infinite}
+    @keyframes run{to{stroke-dashoffset:-20}}
   </style>
 <g clip-path="url(#clip)">
-<rect width="830" height="624" fill="#0a0a14"/>
+<rect width="830" height="656" fill="#f3eee3"/>
 
-  <rect width="830" height="624" fill="url(#sl)" mask="url(#slmask)" opacity=".5"/>
-  <path class="track" d="M60 90 L60 534 L60 608 L415 608 L415 90 L465 90 L465 534" fill="none" stroke="url(#brand)" stroke-width="2" opacity=".85"/>
-  <circle r="5" fill="#22d3ee" filter="url(#glow)"><animateMotion dur="12s" repeatCount="indefinite" path="M60 90 L60 534 L60 608 L415 608 L415 90 L465 90 L465 534"/></circle>
+  <path class="track" d="M60 94 L60 562 L60 640 L415 640 L415 94 L465 94 L465 562" fill="none" stroke="#b8431f" stroke-width="1.8" opacity=".85"/>
+  <circle r="4.5" fill="#b8431f"><animateMotion dur="12s" repeatCount="indefinite" path="M60 94 L60 562 L60 640 L415 640 L415 94 L465 94 L465 562"/></circle>
   
   <g>
-    <rect x="20" y="24" width="385" height="132" rx="16" fill="url(#card)" stroke="#8b7cff" stroke-opacity=".38"/>
-    <rect x="20" y="42" width="3" height="96" rx="1.5" fill="#8b7cff"/>
-    <circle cx="60" cy="90" r="23" fill="#0a0a14" stroke="#8b7cff" stroke-width="1.5"/>
-    <text x="60" y="96" font-size="16" fill="#8b7cff" font-weight="800" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="middle" opacity="1">01</text>
-    <text x="102" y="54" font-size="17" fill="#eceaff" font-weight="700" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">Validate</text>
-    <text x="102" y="78.0" font-size="12.4" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">Talk to users and build a scoring</text><text x="102" y="95.4" font-size="12.4" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">prototype before a full build.</text>
-    <rect x="102" y="119.72" width="3" height="31.160000000000004" rx="1.5" fill="#8b7cff" opacity=".6"/>
-    <text x="116" y="130.7" font-size="10.8" fill="#8b7cff" font-weight="400" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="start" opacity="1">ParchiVisa: validated first, then live in</text><text x="116" y="145.3" font-size="10.8" fill="#8b7cff" font-weight="400" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="start" opacity="1">six weeks.</text>
+    <rect x="20" y="24" width="385" height="140" rx="4" fill="url(#card)" stroke="#d6ccb8"/>
+    <rect x="20" y="24" width="385" height="3" fill="#2d4b6e"/>
+    <circle cx="60" cy="94" r="23" fill="#f3eee3" stroke="#2d4b6e" stroke-width="1.5"/>
+    <text x="60" y="101" font-size="20" fill="#2d4b6e" font-weight="700" font-family="'Times New Roman',Times,'Liberation Serif',serif" text-anchor="middle" opacity="1">01</text>
+    <text x="102" y="56" font-size="18" fill="#1d1c1a" font-weight="700" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1">Validate</text>
+    <text x="102" y="78.0" font-size="12.6" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">Talk to users and build a scoring</text><text x="102" y="95.6" font-size="12.6" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">prototype before a full build.</text>
+    <text x="102" y="133.3" font-size="12" fill="#2d4b6e" font-weight="400" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1" font-style="italic">ParchiVisa: validated first, then live in</text><text x="102" y="149.5" font-size="12" fill="#2d4b6e" font-weight="400" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1" font-style="italic">six weeks.</text>
   </g>
   <g>
-    <rect x="20" y="172" width="385" height="132" rx="16" fill="url(#card)" stroke="#8b7cff" stroke-opacity=".38"/>
-    <rect x="20" y="190" width="3" height="96" rx="1.5" fill="#8b7cff"/>
-    <circle cx="60" cy="238" r="23" fill="#0a0a14" stroke="#8b7cff" stroke-width="1.5"/>
-    <text x="60" y="244" font-size="16" fill="#8b7cff" font-weight="800" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="middle" opacity="1">02</text>
-    <text x="102" y="202" font-size="17" fill="#eceaff" font-weight="700" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">Model</text>
-    <text x="102" y="226.0" font-size="12.4" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">Schema and rules first. Business rules</text><text x="102" y="243.4" font-size="12.4" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">live as data, not code branches.</text>
-    <rect x="102" y="267.72" width="3" height="31.160000000000004" rx="1.5" fill="#8b7cff" opacity=".6"/>
-    <text x="116" y="278.7" font-size="10.8" fill="#8b7cff" font-weight="400" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="start" opacity="1">Four country engines run on rules kept as</text><text x="116" y="293.3" font-size="10.8" fill="#8b7cff" font-weight="400" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="start" opacity="1">data.</text>
+    <rect x="20" y="180" width="385" height="140" rx="4" fill="url(#card)" stroke="#d6ccb8"/>
+    <rect x="20" y="180" width="385" height="3" fill="#2d4b6e"/>
+    <circle cx="60" cy="250" r="23" fill="#f3eee3" stroke="#2d4b6e" stroke-width="1.5"/>
+    <text x="60" y="257" font-size="20" fill="#2d4b6e" font-weight="700" font-family="'Times New Roman',Times,'Liberation Serif',serif" text-anchor="middle" opacity="1">02</text>
+    <text x="102" y="212" font-size="18" fill="#1d1c1a" font-weight="700" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1">Model</text>
+    <text x="102" y="234.0" font-size="12.6" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">Schema and rules first. Business rules</text><text x="102" y="251.6" font-size="12.6" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">live as data, not code branches.</text>
+    <text x="102" y="289.3" font-size="12" fill="#2d4b6e" font-weight="400" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1" font-style="italic">Four country engines run on rules kept as</text><text x="102" y="305.5" font-size="12" fill="#2d4b6e" font-weight="400" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1" font-style="italic">data.</text>
   </g>
   <g>
-    <rect x="20" y="320" width="385" height="132" rx="16" fill="url(#card)" stroke="#22d3ee" stroke-opacity=".38"/>
-    <rect x="20" y="338" width="3" height="96" rx="1.5" fill="#22d3ee"/>
-    <circle cx="60" cy="386" r="23" fill="#0a0a14" stroke="#22d3ee" stroke-width="1.5"/>
-    <text x="60" y="392" font-size="16" fill="#22d3ee" font-weight="800" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="middle" opacity="1">03</text>
-    <text x="102" y="350" font-size="17" fill="#eceaff" font-weight="700" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">Build</text>
-    <text x="102" y="374.0" font-size="12.4" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">One thin slice, end to end, before</text><text x="102" y="391.4" font-size="12.4" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">anything gets polished.</text>
-    <rect x="102" y="415.72" width="3" height="31.160000000000004" rx="1.5" fill="#22d3ee" opacity=".6"/>
-    <text x="116" y="426.7" font-size="10.8" fill="#22d3ee" font-weight="400" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="start" opacity="1">ParchiVisa intake, scoring, PDF and</text><text x="116" y="441.3" font-size="10.8" fill="#22d3ee" font-weight="400" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="start" opacity="1">payment run with no manual steps.</text>
+    <rect x="20" y="336" width="385" height="140" rx="4" fill="url(#card)" stroke="#d6ccb8"/>
+    <rect x="20" y="336" width="385" height="3" fill="#b8431f"/>
+    <circle cx="60" cy="406" r="23" fill="#f3eee3" stroke="#b8431f" stroke-width="1.5"/>
+    <text x="60" y="413" font-size="20" fill="#b8431f" font-weight="700" font-family="'Times New Roman',Times,'Liberation Serif',serif" text-anchor="middle" opacity="1">03</text>
+    <text x="102" y="368" font-size="18" fill="#1d1c1a" font-weight="700" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1">Build</text>
+    <text x="102" y="390.0" font-size="12.6" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">One thin slice, end to end, before</text><text x="102" y="407.6" font-size="12.6" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">anything gets polished.</text>
+    <text x="102" y="445.3" font-size="12" fill="#b8431f" font-weight="400" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1" font-style="italic">ParchiVisa intake, scoring, PDF and</text><text x="102" y="461.5" font-size="12" fill="#b8431f" font-weight="400" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1" font-style="italic">payment run with no manual steps.</text>
   </g>
   <g>
-    <rect x="20" y="468" width="385" height="132" rx="16" fill="url(#card)" stroke="#22d3ee" stroke-opacity=".38"/>
-    <rect x="20" y="486" width="3" height="96" rx="1.5" fill="#22d3ee"/>
-    <circle cx="60" cy="534" r="23" fill="#0a0a14" stroke="#22d3ee" stroke-width="1.5"/>
-    <text x="60" y="540" font-size="16" fill="#22d3ee" font-weight="800" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="middle" opacity="1">04</text>
-    <text x="102" y="498" font-size="17" fill="#eceaff" font-weight="700" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">Break</text>
-    <text x="102" y="522.0" font-size="12.4" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">Write the failure cases early: timeouts,</text><text x="102" y="539.4" font-size="12.4" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">duplicates, retries, over-refunds.</text>
-    <rect x="102" y="563.72" width="3" height="31.160000000000004" rx="1.5" fill="#22d3ee" opacity=".6"/>
-    <text x="116" y="574.7" font-size="10.8" fill="#22d3ee" font-weight="400" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="start" opacity="1">Cascade: 45 tests, integration tests on a</text><text x="116" y="589.3" font-size="10.8" fill="#22d3ee" font-weight="400" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="start" opacity="1">real PostgreSQL.</text>
+    <rect x="20" y="492" width="385" height="140" rx="4" fill="url(#card)" stroke="#d6ccb8"/>
+    <rect x="20" y="492" width="385" height="3" fill="#b8431f"/>
+    <circle cx="60" cy="562" r="23" fill="#f3eee3" stroke="#b8431f" stroke-width="1.5"/>
+    <text x="60" y="569" font-size="20" fill="#b8431f" font-weight="700" font-family="'Times New Roman',Times,'Liberation Serif',serif" text-anchor="middle" opacity="1">04</text>
+    <text x="102" y="524" font-size="18" fill="#1d1c1a" font-weight="700" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1">Break</text>
+    <text x="102" y="546.0" font-size="12.6" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">Write the failure cases early: timeouts,</text><text x="102" y="563.6" font-size="12.6" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">duplicates, retries, over-refunds.</text>
+    <text x="102" y="601.3" font-size="12" fill="#b8431f" font-weight="400" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1" font-style="italic">Cascade: 45 tests, integration tests on a</text><text x="102" y="617.5" font-size="12" fill="#b8431f" font-weight="400" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1" font-style="italic">real PostgreSQL.</text>
   </g>
   <g>
-    <rect x="425" y="24" width="385" height="132" rx="16" fill="url(#card)" stroke="#34d399" stroke-opacity=".38"/>
-    <rect x="425" y="42" width="3" height="96" rx="1.5" fill="#34d399"/>
-    <circle cx="465" cy="90" r="23" fill="#0a0a14" stroke="#34d399" stroke-width="1.5"/>
-    <text x="465" y="96" font-size="16" fill="#34d399" font-weight="800" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="middle" opacity="1">05</text>
-    <text x="507" y="54" font-size="17" fill="#eceaff" font-weight="700" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">Ship</text>
-    <text x="507" y="78.0" font-size="12.4" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">Docker, CI, one deploy. A live preview</text><text x="507" y="95.4" font-size="12.4" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">from week one, weekly written updates.</text>
-    <rect x="507" y="119.72" width="3" height="31.160000000000004" rx="1.5" fill="#34d399" opacity=".6"/>
-    <text x="521" y="130.7" font-size="10.8" fill="#34d399" font-weight="400" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="start" opacity="1">Cascade: Docker plus CI on GitHub</text><text x="521" y="145.3" font-size="10.8" fill="#34d399" font-weight="400" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="start" opacity="1">Actions.</text>
+    <rect x="425" y="24" width="385" height="140" rx="4" fill="url(#card)" stroke="#d6ccb8"/>
+    <rect x="425" y="24" width="385" height="3" fill="#2f6b4f"/>
+    <circle cx="465" cy="94" r="23" fill="#f3eee3" stroke="#2f6b4f" stroke-width="1.5"/>
+    <text x="465" y="101" font-size="20" fill="#2f6b4f" font-weight="700" font-family="'Times New Roman',Times,'Liberation Serif',serif" text-anchor="middle" opacity="1">05</text>
+    <text x="507" y="56" font-size="18" fill="#1d1c1a" font-weight="700" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1">Ship</text>
+    <text x="507" y="78.0" font-size="12.6" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">Docker, CI, one deploy. A live preview</text><text x="507" y="95.6" font-size="12.6" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">from week one, weekly written updates.</text>
+    <text x="507" y="133.3" font-size="12" fill="#2f6b4f" font-weight="400" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1" font-style="italic">Cascade: Docker plus CI on GitHub</text><text x="507" y="149.5" font-size="12" fill="#2f6b4f" font-weight="400" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1" font-style="italic">Actions.</text>
   </g>
   <g>
-    <rect x="425" y="172" width="385" height="132" rx="16" fill="url(#card)" stroke="#34d399" stroke-opacity=".38"/>
-    <rect x="425" y="190" width="3" height="96" rx="1.5" fill="#34d399"/>
-    <circle cx="465" cy="238" r="23" fill="#0a0a14" stroke="#34d399" stroke-width="1.5"/>
-    <text x="465" y="244" font-size="16" fill="#34d399" font-weight="800" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="middle" opacity="1">06</text>
-    <text x="507" y="202" font-size="17" fill="#eceaff" font-weight="700" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">Run</text>
-    <text x="507" y="226.0" font-size="12.4" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">Monitor it, fix it fast. As sole engineer,</text><text x="507" y="243.4" font-size="12.4" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">nobody else to hand a failure to.</text>
-    <rect x="507" y="267.72" width="3" height="31.160000000000004" rx="1.5" fill="#34d399" opacity=".6"/>
-    <text x="521" y="278.7" font-size="10.8" fill="#34d399" font-weight="400" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="start" opacity="1">ParchiVisa: AWS Lightsail behind</text><text x="521" y="293.3" font-size="10.8" fill="#34d399" font-weight="400" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="start" opacity="1">Cloudflare, watched by Sentry.</text>
+    <rect x="425" y="180" width="385" height="140" rx="4" fill="url(#card)" stroke="#d6ccb8"/>
+    <rect x="425" y="180" width="385" height="3" fill="#2f6b4f"/>
+    <circle cx="465" cy="250" r="23" fill="#f3eee3" stroke="#2f6b4f" stroke-width="1.5"/>
+    <text x="465" y="257" font-size="20" fill="#2f6b4f" font-weight="700" font-family="'Times New Roman',Times,'Liberation Serif',serif" text-anchor="middle" opacity="1">06</text>
+    <text x="507" y="212" font-size="18" fill="#1d1c1a" font-weight="700" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1">Run</text>
+    <text x="507" y="234.0" font-size="12.6" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">Monitor it and fix it fast. As sole</text><text x="507" y="251.6" font-size="12.6" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">engineer, there is no one to hand off to.</text>
+    <text x="507" y="289.3" font-size="12" fill="#2f6b4f" font-weight="400" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1" font-style="italic">ParchiVisa: AWS Lightsail behind</text><text x="507" y="305.5" font-size="12" fill="#2f6b4f" font-weight="400" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1" font-style="italic">Cloudflare, watched by Sentry.</text>
   </g>
   <g>
-    <rect x="425" y="320" width="385" height="132" rx="16" fill="url(#card)" stroke="#fbbf24" stroke-opacity=".38"/>
-    <rect x="425" y="338" width="3" height="96" rx="1.5" fill="#fbbf24"/>
-    <circle cx="465" cy="386" r="23" fill="#0a0a14" stroke="#fbbf24" stroke-width="1.5"/>
-    <text x="465" y="392" font-size="16" fill="#fbbf24" font-weight="800" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="middle" opacity="1">07</text>
-    <text x="507" y="350" font-size="17" fill="#eceaff" font-weight="700" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">Hand over</text>
-    <text x="507" y="374.0" font-size="12.4" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">Code, accounts and keys sit in your own</text><text x="507" y="391.4" font-size="12.4" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">GitHub and cloud from day one.</text>
-    <rect x="507" y="415.72" width="3" height="31.160000000000004" rx="1.5" fill="#fbbf24" opacity=".6"/>
-    <text x="521" y="426.7" font-size="10.8" fill="#fbbf24" font-weight="400" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="start" opacity="1">Two weeks of fixes after launch are in</text><text x="521" y="441.3" font-size="10.8" fill="#fbbf24" font-weight="400" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="start" opacity="1">the quoted price.</text>
+    <rect x="425" y="336" width="385" height="140" rx="4" fill="url(#card)" stroke="#d6ccb8"/>
+    <rect x="425" y="336" width="385" height="3" fill="#a5701a"/>
+    <circle cx="465" cy="406" r="23" fill="#f3eee3" stroke="#a5701a" stroke-width="1.5"/>
+    <text x="465" y="413" font-size="20" fill="#a5701a" font-weight="700" font-family="'Times New Roman',Times,'Liberation Serif',serif" text-anchor="middle" opacity="1">07</text>
+    <text x="507" y="368" font-size="18" fill="#1d1c1a" font-weight="700" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1">Hand over</text>
+    <text x="507" y="390.0" font-size="12.6" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">Code, accounts and keys sit in your own</text><text x="507" y="407.6" font-size="12.6" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">GitHub and cloud from day one.</text>
+    <text x="507" y="445.3" font-size="12" fill="#a5701a" font-weight="400" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1" font-style="italic">Two weeks of fixes after launch are in</text><text x="507" y="461.5" font-size="12" fill="#a5701a" font-weight="400" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1" font-style="italic">the quoted price.</text>
   </g>
   <g>
-    <rect x="425" y="468" width="385" height="132" rx="16" fill="url(#card)" stroke="#f472b6" stroke-opacity=".38"/>
-    <rect x="425" y="486" width="3" height="96" rx="1.5" fill="#f472b6"/>
-    <circle cx="465" cy="534" r="23" fill="#0a0a14" stroke="#f472b6" stroke-width="1.5"/>
-    <text x="465" y="540" font-size="16" fill="#f472b6" font-weight="800" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="middle" opacity="1">08</text>
-    <text x="507" y="498" font-size="17" fill="#eceaff" font-weight="700" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">Write it down</text>
-    <text x="507" y="522.0" font-size="12.4" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">Say what the project does not do yet, in</text><text x="507" y="539.4" font-size="12.4" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">public, next to what it does.</text>
-    <rect x="507" y="563.72" width="3" height="31.160000000000004" rx="1.5" fill="#f472b6" opacity=".6"/>
-    <text x="521" y="574.7" font-size="10.8" fill="#f472b6" font-weight="400" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="start" opacity="1">Every case study on my site has an Honest</text><text x="521" y="589.3" font-size="10.8" fill="#f472b6" font-weight="400" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="start" opacity="1">limits section.</text>
+    <rect x="425" y="492" width="385" height="140" rx="4" fill="url(#card)" stroke="#d6ccb8"/>
+    <rect x="425" y="492" width="385" height="3" fill="#7a3b5e"/>
+    <circle cx="465" cy="562" r="23" fill="#f3eee3" stroke="#7a3b5e" stroke-width="1.5"/>
+    <text x="465" y="569" font-size="20" fill="#7a3b5e" font-weight="700" font-family="'Times New Roman',Times,'Liberation Serif',serif" text-anchor="middle" opacity="1">08</text>
+    <text x="507" y="524" font-size="18" fill="#1d1c1a" font-weight="700" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1">Write it down</text>
+    <text x="507" y="546.0" font-size="12.6" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">Say what the project does not do yet, in</text><text x="507" y="563.6" font-size="12.6" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">public, next to what it does.</text>
+    <text x="507" y="601.3" font-size="12" fill="#7a3b5e" font-weight="400" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1" font-style="italic">Every case study on my site has an Honest</text><text x="507" y="617.5" font-size="12" fill="#7a3b5e" font-weight="400" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1" font-style="italic">limits section.</text>
   </g>
 
 </g>
-<rect x=".5" y=".5" width="829" height="623" rx="18" fill="none" stroke="#ffffff1a"/>
+<rect x=".5" y=".5" width="829" height="655" rx="6" fill="none" stroke="#d6ccb8"/>
 </svg>

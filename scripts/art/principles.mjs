@@ -1,15 +1,15 @@
-import { C, SANS, MONO, doc, t, lines, textWidth, dotGrid } from "../lib/svg.mjs";
+import { C, doc, t, lines, wrap, textWidth } from "../lib/svg.mjs";
 
 // Four decisions where the first instinct was wrong. The struck-through line draws itself, then
-// the choice lights up. Text is condensed from the published "How I think" notes.
+// the choice sits beside it. Text is condensed from the published "How I think" notes.
 export function principles(p) {
   const w = 830;
   const rowH = 148;
   const top = 14;
   const h = top + p.principles.length * rowH + 6;
-  const tints = [C.violet, C.cyan, C.green, C.amber];
+  const tints = [C.blue, C.rust, C.green, C.ochre];
   const colX = 24;
-  const colW = 380;
+  const colW = 392;
   const rightX = 452;
   const rightW = w - rightX - 24;
 
@@ -17,24 +17,31 @@ export function principles(p) {
     .map((r, i) => {
       const y = top + i * rowH;
       const c = tints[i % tints.length];
-      const first = lines(r.first, colX + 4, y + 62, { fs: 15.5, maxPx: colW, fill: C.text, weight: 600, lh: 1.35 });
-      const strikes = first.svg ? "" : "";
-      const ls = r.first;
-      const sw = Math.min(textWidth(ls, 15.5), colW);
-      const ev = lines(r.then, colX + 4, y + 62 + first.height + 16, { fs: 12.2, maxPx: colW, fill: C.muted, lh: 1.42 });
-      const chose = lines(r.chose, rightX + 22, y + 66, { fs: 14.5, maxPx: rightW - 44, fill: C.text, weight: 600, lh: 1.42 });
-      const len = Math.ceil(sw);
+      const FS = 15.5;
+      const first = lines(r.first, colX + 4, y + 66, { fs: FS, maxPx: colW, fill: C.text, lh: 1.35, font: "serif", weight: 700 });
+      const firstLines = wrap(r.first, colW, FS, { font: "serif", weight: 700 });
+            const ev = lines(r.then, colX + 4, y + 66 + first.height + 14, { fs: 12.5, maxPx: colW, fill: C.muted, lh: 1.42 });
+      const chose = lines(r.chose, rightX + 22, y + 70, { fs: 14, maxPx: rightW - 44, fill: C.text, lh: 1.42, font: "serif", weight: 700 });
+            const mid = y + rowH / 2 - 2;
       return `
   <g>
-    <rect x="${colX - 8}" y="${y + 6}" width="${w - 2 * (colX - 8)}" height="${rowH - 14}" rx="16" fill="url(#card)" stroke="${c}" stroke-opacity=".28"/>
-    ${t(r.project.toUpperCase(), colX + 4, y + 34, { fs: 10.5, mono: true, fill: c, ls: 1.8 })}
-    ${t("FIRST INSTINCT", colX + 4 + textWidth(r.project, 10.5, { mono: true }) + 30, y + 34, { fs: 9.5, mono: true, fill: C.dim, ls: 1.6 })}
+    <rect x="${colX - 8}" y="${y + 6}" width="${w - 2 * (colX - 8)}" height="${rowH - 14}" rx="4" fill="url(#card)" stroke="${C.line}"/>
+    <rect x="${colX - 8}" y="${y + 6}" width="4" height="${rowH - 14}" fill="${c}"/>
+    ${t(r.project, colX + 4, y + 36, { fs: 14, italic: true, fill: c, font: "serif", weight: 700 })}
+    ${t("First instinct", colX + 4 + textWidth(r.project, 14, { font: "serif", weight: 700 }) + 16, y + 36, { fs: 11.5, fill: C.dim })}
     ${first.svg}
-    <line class="strike" style="--len:${len};animation-delay:${i * 1.1}s" x1="${colX + 4}" y1="${y + 57}" x2="${colX + 4 + sw}" y2="${y + 57}" stroke="${C.red}" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="${len}"/>
+    ${firstLines
+      .map((ln, k) => {
+        const sw = Math.min(textWidth(ln, FS, { font: "serif", weight: 700 }), colW);
+        const len = Math.ceil(sw);
+        const yy = y + 66 - FS * 0.3 + k * FS * 1.35;
+        return `<line class="strike" style="--len:${len};animation-delay:${i * 1.1}s" x1="${colX + 4}" y1="${yy.toFixed(1)}" x2="${(colX + 4 + sw).toFixed(1)}" y2="${yy.toFixed(1)}" stroke="${C.red}" stroke-width="2" stroke-dasharray="${len}"/>`;
+      })
+      .join("")}
     ${ev.svg}
-    <path d="M${rightX - 26} ${y + rowH / 2 - 2} L${rightX - 8} ${y + rowH / 2 - 2} M${rightX - 14} ${y + rowH / 2 - 8} L${rightX - 6} ${y + rowH / 2 - 2} L${rightX - 14} ${y + rowH / 2 + 4}" fill="none" stroke="${c}" stroke-width="2" stroke-linecap="round"/>
-    <rect x="${rightX}" y="${y + 20}" width="${rightW}" height="${rowH - 42}" rx="12" fill="${c}" fill-opacity=".08" stroke="${c}" stroke-opacity=".4"/>
-    ${t("WHAT I CHOSE", rightX + 22, y + 44, { fs: 9.5, mono: true, fill: c, ls: 1.8 })}
+    <path d="M${rightX - 28} ${mid} L${rightX - 8} ${mid} M${rightX - 15} ${mid - 6} L${rightX - 7} ${mid} L${rightX - 15} ${mid + 6}" fill="none" stroke="${c}" stroke-width="2"/>
+    <rect x="${rightX}" y="${y + 20}" width="${rightW}" height="${rowH - 42}" rx="3" fill="${c}0f" stroke="${c}" stroke-opacity=".5"/>
+    ${t("What I chose", rightX + 22, y + 45, { fs: 11.5, fill: c, weight: 700 })}
     ${chose.svg}
   </g>`;
     })

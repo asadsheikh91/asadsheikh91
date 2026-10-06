@@ -2,89 +2,58 @@
 <title id="t">Asad Amad Sheikh, Full Stack Engineer</title>
 <desc id="d">Profile banner. Asad Amad Sheikh, full stack engineer. I ship systems, then I own them. ParchiVisa is live.</desc>
 <defs>
-  <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8b7cff"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
-  <linearGradient id="brandV" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8b7cff"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
-  <linearGradient id="card" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#171730"/><stop offset="1" stop-color="#0e0e1c"/></linearGradient>
-  <filter id="blur40" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="40"/></filter>
-  <filter id="blur20" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="20"/></filter>
-  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-  <clipPath id="clip"><rect width="830" height="330" rx="18"/></clipPath>
+  <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#b8431f"/><stop offset="1" stop-color="#b8431f"/></linearGradient>
+  <linearGradient id="card" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbf8f1"/><stop offset="1" stop-color="#fbf8f1"/></linearGradient>
+  <filter id="glow"><feMerge><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <clipPath id="clip"><rect width="830" height="330" rx="6"/></clipPath>
   
-  <linearGradient id="nameGrad" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
-    <stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#d9d3ff"/><stop offset="1" stop-color="#22d3ee"/>
-  </linearGradient>
-  <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1" fill="#ffffff" opacity="0.35"/></pattern>
-<radialGradient id="dotsfade" cx=".5" cy=".5" r=".75"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#000"/></radialGradient>
-<mask id="dotsmask"><rect width="830" height="330" fill="url(#dotsfade)"/></mask>
 </defs>
 <style>
-  text{text-rendering:geometricPrecision}
+  text{text-rendering:optimizeLegibility}
   @media (prefers-reduced-motion: reduce){*{animation:none !important}}
 
-    .a1{animation:d1 14s ease-in-out infinite}
-    .a2{animation:d2 17s ease-in-out infinite}
-    .a3{animation:d3 20s ease-in-out infinite}
-    @keyframes d1{0%,100%{transform:translate(0,0)}50%{transform:translate(90px,40px)}}
-    @keyframes d2{0%,100%{transform:translate(0,0)}50%{transform:translate(-110px,30px)}}
-    @keyframes d3{0%,100%{transform:translate(0,0)}50%{transform:translate(-60px,-50px)}}
     .proof{opacity:0;animation:cyc 12s infinite}
-    @keyframes cyc{0%{opacity:0;transform:translateY(6px)}4%,29%{opacity:1;transform:translateY(0)}33%,100%{opacity:0;transform:translateY(-6px)}}
-    .node{animation:nodepulse 3.6s infinite}
-    @keyframes nodepulse{0%,100%{opacity:.62}12%,30%{opacity:1}}
-    .dot{animation:blink 1.6s ease-in-out infinite}
-    @keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
-    .pulse{stroke-dasharray:6 14;animation:flow 1.4s linear infinite}
-    @keyframes flow{to{stroke-dashoffset:-20}}
+    @keyframes cyc{0%{opacity:0}4%,29%{opacity:1}33%,100%{opacity:0}}
+    .dot{animation:blink 1.8s ease-in-out infinite}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+    .under{stroke-dasharray:90;animation:ul 6s ease-in-out infinite}
+    @keyframes ul{0%{stroke-dashoffset:90}15%,100%{stroke-dashoffset:0}}
   </style>
 <g clip-path="url(#clip)">
-<rect width="830" height="330" fill="#0a0a14"/>
+<rect width="830" height="330" fill="#f3eee3"/>
 
-  <rect width="830" height="330" fill="#0a0a14"/>
-  <circle class="a1" cx="170" cy="60" r="150" fill="#8b7cff" opacity=".42" filter="url(#blur40)"/>
-  <circle class="a2" cx="660" cy="270" r="140" fill="#22d3ee" opacity=".30" filter="url(#blur40)"/>
-  <circle class="a3" cx="430" cy="320" r="110" fill="#f472b6" opacity=".20" filter="url(#blur40)"/>
-  <rect width="830" height="330" fill="url(#dots)" mask="url(#dotsmask)" opacity=".5"/>
-  <text x="48" y="52" font-size="13" fill="#6d6b8f" font-weight="400" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="start" opacity="1">~/asadsheikh91</text>
-  <text x="178" y="52" font-size="13" fill="#6d6b8f" font-weight="400" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="start" opacity="1">Islamabad, PK  ·  UTC+5</text>
-  <text x="46" y="118" font-size="54" font-weight="800" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" fill="url(#nameGrad)" letter-spacing="-1.5">Asad Amad Sheikh</text>
-  <text x="48" y="160" font-size="25" fill="#eceaff" font-weight="600" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">I ship systems. Then I own them.</text>
-  <text x="48" y="196" font-size="16" fill="#22d3ee" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace">&gt;</text>
-  <text class="proof" style="animation-delay:0s" x="72" y="196" font-size="16" fill="#22d3ee" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace">shipped ParchiVisa alone in six weeks. it is live.</text><text class="proof" style="animation-delay:4s" x="72" y="196" font-size="16" fill="#22d3ee" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace">a timeout is not a decline. the database enforces it.</text><text class="proof" style="animation-delay:8s" x="72" y="196" font-size="16" fill="#22d3ee" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace">your code, accounts and keys, in your cloud from day one.</text>
-  <rect x="48" y="262" width="154" height="30" rx="15" fill="#34d3991c" stroke="#34d39955"/><text x="125" y="281.375" font-size="12.5" fill="#34d399" font-weight="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="middle" opacity="1">ParchiVisa is live</text>
-  <circle class="dot" cx="66" cy="277" r="4" fill="#34d399"/>
-  <rect x="212" y="262" width="201" height="30" rx="15" fill="#ffffff12" stroke="#ffffff22"/><text x="312.5" y="281.375" font-size="12.5" fill="#eceaff" font-weight="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="middle" opacity="1">Sole engineer, end to end</text>
-  <rect x="423" y="262" width="194" height="30" rx="15" fill="#ffffff12" stroke="#ffffff22"/><text x="520" y="281.375" font-size="12.5" fill="#eceaff" font-weight="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="middle" opacity="1">Web apps · AI · Payments</text>
-  <g>
-    <line x1="696" y1="110" x2="696" y2="128" stroke="#ffffff26" stroke-dasharray="3 4"/><line x1="696" y1="168" x2="696" y2="186" stroke="#ffffff26" stroke-dasharray="3 4"/><line x1="696" y1="226" x2="696" y2="244" stroke="#ffffff26" stroke-dasharray="3 4"/>
-    
-  <g class="node" style="animation-delay:0s">
-    <rect x="610" y="70" width="172" height="40" rx="10" fill="#ffffff0a" stroke="#ffffff26"/>
-    <circle cx="628" cy="90" r="4" fill="#22d3ee"/>
-    <text x="642" y="88" font-size="13" fill="#eceaff" font-weight="600" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="start" opacity="1">next.js</text>
-    <text x="642" y="102" font-size="10.5" fill="#6d6b8f" font-weight="400" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="start" opacity="1">intake + report</text>
-  </g>
-  <g class="node" style="animation-delay:0.9s">
-    <rect x="610" y="128" width="172" height="40" rx="10" fill="#ffffff0a" stroke="#ffffff26"/>
-    <circle cx="628" cy="148" r="4" fill="#22d3ee"/>
-    <text x="642" y="146" font-size="13" fill="#eceaff" font-weight="600" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="start" opacity="1">fastapi</text>
-    <text x="642" y="160" font-size="10.5" fill="#6d6b8f" font-weight="400" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="start" opacity="1">rules decide</text>
-  </g>
-  <g class="node" style="animation-delay:1.8s">
-    <rect x="610" y="186" width="172" height="40" rx="10" fill="#ffffff0a" stroke="#ffffff26"/>
-    <circle cx="628" cy="206" r="4" fill="#22d3ee"/>
-    <text x="642" y="204" font-size="13" fill="#eceaff" font-weight="600" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="start" opacity="1">postgres</text>
-    <text x="642" y="218" font-size="10.5" fill="#6d6b8f" font-weight="400" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="start" opacity="1">state</text>
-  </g>
-  <g class="node" style="animation-delay:2.7s">
-    <rect x="610" y="244" width="172" height="40" rx="10" fill="#ffffff0a" stroke="#ffffff26"/>
-    <circle cx="628" cy="264" r="4" fill="#22d3ee"/>
-    <text x="642" y="262" font-size="13" fill="#eceaff" font-weight="600" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="start" opacity="1">report.pdf</text>
-    <text x="642" y="276" font-size="10.5" fill="#6d6b8f" font-weight="400" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="start" opacity="1">one template</text>
-  </g>
-    <circle r="4" fill="#22d3ee" filter="url(#glow)"><animateMotion dur="3.6s" repeatCount="indefinite" path="M696 70 L696 284"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.08;.9;1" dur="3.6s" repeatCount="indefinite"/></circle>
-  </g>
-  <path class="pulse" d="M0 312 L180 312 L200 300 L216 322 L232 292 L250 312 L830 312" fill="none" stroke="url(#brand)" stroke-width="2" opacity=".7"/>
+  <line x1="32" x2="798" y1="26" y2="26" stroke="#1d1c1a" stroke-width="3"/>
+  <line x1="32" x2="798" y1="32" y2="32" stroke="#1d1c1a" stroke-width="1"/>
+  <text x="32" y="58" font-size="12.5" fill="#70685b" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">Islamabad, Pakistan  ·  UTC+5</text>
+  <text x="798" y="58" font-size="12.5" fill="#70685b" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="end" opacity="1">Full stack engineer</text>
+  <text x="30" y="142" font-size="54" fill="#1d1c1a" font-weight="700" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1">Asad Amad Sheikh</text>
+  <line class="under" x1="32" x2="122" y1="164" y2="164" stroke="#b8431f" stroke-width="5" stroke-linecap="butt"/>
+  <text x="32" y="204" font-size="25" fill="#1d1c1a" font-weight="400" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1" font-style="italic">I ship systems. Then I own them.</text>
+  <text x="32" y="230" font-size="16" fill="#b8431f" font-weight="700" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1">→</text>
+  <text class="proof" style="animation-delay:0s" x="56" y="230" font-size="16" fill="#554f45" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif">Shipped ParchiVisa alone in six weeks. It is live.</text><text class="proof" style="animation-delay:4s" x="56" y="230" font-size="16" fill="#554f45" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif">A timeout is not a decline, and the database enforces it.</text><text class="proof" style="animation-delay:8s" x="56" y="230" font-size="16" fill="#554f45" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif">Your code, accounts and keys, in your cloud from day one.</text>
+  <text x="616" y="84" font-size="13" fill="#554f45" font-weight="400" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1" font-style="italic">One request, one owner</text>
+  
+  <line x1="616" x2="798" y1="98" y2="98" stroke="#d6ccb8"/>
+  <text x="638" y="120" font-size="15" fill="#1d1c1a" font-weight="700" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1">next.js</text>
+  <text x="638" y="136" font-size="11" fill="#70685b" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">intake and report</text>
+  <line x1="616" x2="798" y1="144" y2="144" stroke="#d6ccb8"/>
+  <text x="638" y="166" font-size="15" fill="#1d1c1a" font-weight="700" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1">fastapi</text>
+  <text x="638" y="182" font-size="11" fill="#70685b" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">rules decide the verdict</text>
+  <line x1="616" x2="798" y1="190" y2="190" stroke="#d6ccb8"/>
+  <text x="638" y="212" font-size="15" fill="#1d1c1a" font-weight="700" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1">postgres</text>
+  <text x="638" y="228" font-size="11" fill="#70685b" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">state</text>
+  <line x1="616" x2="798" y1="236" y2="236" stroke="#d6ccb8"/>
+  <text x="638" y="258" font-size="15" fill="#1d1c1a" font-weight="700" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1">report.pdf</text>
+  <text x="638" y="274" font-size="11" fill="#70685b" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">one template, web and PDF</text>
+  <line x1="616" x2="798" y1="282" y2="282" stroke="#d6ccb8"/>
+  <circle r="4" fill="#b8431f"><animateMotion dur="4s" repeatCount="indefinite" path="M624 120 L624 260"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="4s" repeatCount="indefinite"/></circle>
+  <rect x="32" y="268" width="167" height="30" rx="4" fill="none" stroke="#2f6b4f88"/><text x="115.5" y="287.375" font-size="12.5" fill="#2f6b4f" font-weight="600" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="middle" opacity="1">ParchiVisa is live</text>
+  <circle class="dot" cx="50" cy="283" r="4" fill="#2f6b4f"/>
+  <rect x="209" y="268" width="201" height="30" rx="4" fill="none" stroke="#1d1c1a40"/><text x="309.5" y="287.375" font-size="12.5" fill="#1d1c1a" font-weight="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="middle" opacity="1">Sole engineer, end to end</text>
+  <rect x="420" y="268" width="201" height="30" rx="4" fill="none" stroke="#1d1c1a40"/><text x="520.5" y="287.375" font-size="12.5" fill="#1d1c1a" font-weight="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="middle" opacity="1">Web apps, AI and payments</text>
+  <line x1="32" x2="798" y1="312" y2="312" stroke="#1d1c1a" stroke-width="1"/>
+  <line x1="32" x2="798" y1="318" y2="318" stroke="#1d1c1a" stroke-width="3"/>
 
 </g>
-<rect x=".5" y=".5" width="829" height="329" rx="18" fill="none" stroke="#ffffff1a"/>
+<rect x=".5" y=".5" width="829" height="329" rx="6" fill="none" stroke="#d6ccb8"/>
 </svg>

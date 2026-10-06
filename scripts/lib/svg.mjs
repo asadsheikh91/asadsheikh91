@@ -1,32 +1,51 @@
-// Shared design system for every SVG on the profile. Colours match asadamadsh.me:
-// violet to cyan on near-black. Everything is self-contained (no external fonts, images or
-// scripts) because GitHub serves README images through a proxy that blocks all of those.
+// Shared design system for every SVG on the profile.
+//
+// Direction: printed and editorial, not a glowing dashboard. Warm paper, ink-black type, one rust
+// accent with a few muted inks, hairline rules, serif headlines over a plain sans body. No
+// gradient text, no glow, no blurred blobs, no tracked uppercase labels.
+//
+// Everything is self-contained (no web fonts, images or scripts) because GitHub serves README
+// images through a proxy that blocks all of those. Fonts are therefore system stacks: Georgia
+// for headlines, the platform's UI sans for everything else.
 
 export const C = {
-  bg: "#0a0a14",
-  bg2: "#11111e",
-  panel: "#14142a",
-  line: "#2a2a44",
-  text: "#eceaff",
-  muted: "#a09ec0",
-  dim: "#6d6b8f",
-  violet: "#8b7cff",
-  cyan: "#22d3ee",
-  pink: "#f472b6",
-  green: "#34d399",
-  amber: "#fbbf24",
-  red: "#fb7185",
+  bg: "#f3eee3", // paper
+  card: "#fbf8f1", // lighter sheet on the paper
+  panel: "#ebe4d3",
+  line: "#d6ccb8", // hairline
+  text: "#1d1c1a", // ink
+  muted: "#554f45",
+  dim: "#70685b",
+  rust: "#b8431f", // the one accent
+  blue: "#2d4b6e",
+  green: "#2f6b4f",
+  ochre: "#a5701a",
+  plum: "#7a3b5e",
+  red: "#a63232",
 };
 
-export const SANS = "-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif";
-export const MONO = "ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace";
+export const SERIF = "Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif";
+// Georgia's figures are old style (01 reads like o1), so numbers use a lining-figure serif.
+export const LINING = "'Times New Roman',Times,'Liberation Serif',serif";
+export const SANS = "-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif";
+// Old call sites ask for "mono" to mean "small label". Labels are now plain sans.
+export const MONO = SANS;
 
 export const esc = (s) =>
   String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
+/** Which family a text run uses. Big or heavy text is serif; everything else is sans. */
+function family({ font, fs, weight, mono }) {
+  if (font) return font === "serif" ? SERIF : font === "lining" ? LINING : SANS;
+  if (mono) return SANS;
+  return (weight >= 700 && fs >= 14) || fs >= 20 ? SERIF : SANS;
+}
+
 /** Rough text width in px. Good enough to size pills and wrap lines without a font engine. */
-export function textWidth(s, fs, { mono = false, bold = false } = {}) {
-  const f = mono ? 0.6 : bold ? 0.6 : 0.54;
+export function textWidth(s, fs, { mono = false, bold = false, font, weight = bold ? 700 : 400 } = {}) {
+  const fam = family({ font, fs, weight, mono });
+  const serif = fam === SERIF || fam === LINING;
+  const f = serif ? (weight >= 700 ? 0.63 : 0.57) : weight >= 600 ? 0.58 : 0.54;
   return Math.ceil(String(s).length * fs * f);
 }
 
@@ -46,31 +65,32 @@ export function wrap(text, maxPx, fs, opts = {}) {
   return lines;
 }
 
-/** Multi-line <text>. Returns { svg, height }. */
-export function lines(text, x, y, { fs, maxPx, fill = C.text, weight = 400, lh = 1.4, mono = false, anchor = "start", opacity = 1, cls = "" }) {
-  const ls = wrap(text, maxPx, fs, { mono });
+const attrs = ({ fs, fill, weight, anchor, opacity, cls, italic, font, mono }) =>
+  `font-size="${fs}" fill="${fill}" font-weight="${weight}" font-family="${family({ font, fs, weight, mono })}" text-anchor="${anchor}" opacity="${opacity}"${italic ? ' font-style="italic"' : ""}${cls ? ` class="${cls}"` : ""}`;
+
+/** Multi-line <text>. Returns { svg, height, count }. */
+export function lines(text, x, y, { fs, maxPx, fill = C.text, weight = 400, lh = 1.4, mono = false, anchor = "start", opacity = 1, cls = "", italic = false, font } = {}) {
+  const ls = wrap(text, maxPx, fs, { mono, font, weight });
   const out = ls
-    .map(
-      (l, i) =>
-        `<text x="${x}" y="${(y + i * fs * lh).toFixed(1)}" font-size="${fs}" fill="${fill}" font-weight="${weight}" font-family="${mono ? MONO : SANS}" text-anchor="${anchor}" opacity="${opacity}"${cls ? ` class="${cls}"` : ""}>${esc(l)}</text>`,
-    )
+    .map((l, i) => `<text x="${x}" y="${(y + i * fs * lh).toFixed(1)}" ${attrs({ fs, fill, weight, anchor, opacity, cls, italic, font, mono })}>${esc(l)}</text>`)
     .join("");
   return { svg: out, height: ls.length * fs * lh, count: ls.length };
 }
 
-export const t = (text, x, y, { fs = 14, fill = C.text, weight = 400, mono = false, anchor = "start", opacity = 1, cls = "", ls = 0 } = {}) =>
-  `<text x="${x}" y="${y}" font-size="${fs}" fill="${fill}" font-weight="${weight}" font-family="${mono ? MONO : SANS}" text-anchor="${anchor}" opacity="${opacity}"${ls ? ` letter-spacing="${ls}"` : ""}${cls ? ` class="${cls}"` : ""}>${esc(text)}</text>`;
+/** Single-line <text>. `ls` (letter spacing) is accepted for old call sites and ignored. */
+export const t = (text, x, y, { fs = 14, fill = C.text, weight = 400, mono = false, anchor = "start", opacity = 1, cls = "", italic = false, font } = {}) =>
+  `<text x="${x}" y="${y}" ${attrs({ fs, fill, weight, anchor, opacity, cls, italic, font, mono })}>${esc(text)}</text>`;
 
-/** A rounded pill with text. Returns { svg, width }. */
-export function pill(text, x, y, { fs = 12, h = 26, fill = "#ffffff12", stroke = "#ffffff22", color = C.text, mono = false, px = 12, weight = 500 } = {}) {
-  const w = textWidth(text, fs, { mono }) + px * 2;
+/** A flat outlined label. Returns { svg, width }. */
+export function pill(text, x, y, { fs = 12, h = 26, fill = "none", stroke = "#1d1c1a40", color = C.text, mono = false, px = 12, weight = 500, r = 4 } = {}) {
+  const w = textWidth(text, fs, { mono, weight }) + px * 2;
   return {
     width: w,
-    svg: `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${h / 2}" fill="${fill}" stroke="${stroke}"/>${t(text, x + w / 2, y + h / 2 + fs * 0.35, { fs, fill: color, anchor: "middle", mono, weight })}`,
+    svg: `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${r}" fill="${fill}" stroke="${stroke}"/>${t(text, x + w / 2, y + h / 2 + fs * 0.35, { fs, fill: color, anchor: "middle", mono, weight })}`,
   };
 }
 
-/** Flow pills left to right, wrapping at maxX. Returns { svg, height, w }. */
+/** Flow pills left to right, wrapping at maxX. Returns { svg, height }. */
 export function pillFlow(items, x0, y0, maxX, opts = {}) {
   const gap = opts.gap ?? 8;
   const h = opts.h ?? 26;
@@ -82,8 +102,9 @@ export function pillFlow(items, x0, y0, maxX, opts = {}) {
     if (x + p.width > maxX && x > x0) {
       x = x0;
       y += h + gap;
-      svg += pill(it, x, y, opts).svg;
-      x += pill(it, x, y, opts).width + gap;
+      const q = pill(it, x, y, opts);
+      svg += q.svg;
+      x += q.width + gap;
     } else {
       svg += p.svg;
       x += p.width + gap;
@@ -93,26 +114,23 @@ export function pillFlow(items, x0, y0, maxX, opts = {}) {
 }
 
 const BASE_CSS = `
-  text{text-rendering:geometricPrecision}
+  text{text-rendering:optimizeLegibility}
   @media (prefers-reduced-motion: reduce){*{animation:none !important}}
 `;
 
 /**
- * Wrap a body in the standard document: rounded dark card, shared gradients and filters.
- * `css` is appended to the base style. The card always paints its own background so it reads
- * the same in GitHub's light and dark themes.
+ * Wrap a body in the standard document: a sheet of paper with a hairline border. The card always
+ * paints its own background so it reads the same in GitHub's light and dark themes.
+ * `css` is appended to the base style.
  */
-export function doc({ w, h, title, desc, body, css = "", defs = "", bg = true, radius = 18 }) {
+export function doc({ w, h, title, desc, body, css = "", defs = "", bg = true, radius = 6 }) {
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-labelledby="t d">
 <title id="t">${esc(title)}</title>
 <desc id="d">${esc(desc)}</desc>
 <defs>
-  <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="${C.violet}"/><stop offset="1" stop-color="${C.cyan}"/></linearGradient>
-  <linearGradient id="brandV" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${C.violet}"/><stop offset="1" stop-color="${C.cyan}"/></linearGradient>
-  <linearGradient id="card" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#171730"/><stop offset="1" stop-color="#0e0e1c"/></linearGradient>
-  <filter id="blur40" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="40"/></filter>
-  <filter id="blur20" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="20"/></filter>
-  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="${C.rust}"/><stop offset="1" stop-color="${C.rust}"/></linearGradient>
+  <linearGradient id="card" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${C.card}"/><stop offset="1" stop-color="${C.card}"/></linearGradient>
+  <filter id="glow"><feMerge><feMergeNode in="SourceGraphic"/></feMerge></filter>
   <clipPath id="clip"><rect width="${w}" height="${h}" rx="${radius}"/></clipPath>
   ${defs}
 </defs>
@@ -121,19 +139,14 @@ export function doc({ w, h, title, desc, body, css = "", defs = "", bg = true, r
 ${bg ? `<rect width="${w}" height="${h}" fill="${C.bg}"/>` : ""}
 ${body}
 </g>
-${bg ? `<rect x=".5" y=".5" width="${w - 1}" height="${h - 1}" rx="${radius}" fill="none" stroke="#ffffff1a"/>` : ""}
+${bg ? `<rect x=".5" y=".5" width="${w - 1}" height="${h - 1}" rx="${radius}" fill="none" stroke="${C.line}"/>` : ""}
 </svg>
 `;
 }
 
-/** Dot grid pattern def + a rect that uses it, faded toward the edges. */
-export function dotGrid(w, h, { id = "dots", gap = 22, opacity = 0.35 } = {}) {
-  return {
-    defs: `<pattern id="${id}" width="${gap}" height="${gap}" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1" fill="#ffffff" opacity="${opacity}"/></pattern>
-<radialGradient id="${id}fade" cx=".5" cy=".5" r=".75"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#000"/></radialGradient>
-<mask id="${id}mask"><rect width="${w}" height="${h}" fill="url(#${id}fade)"/></mask>`,
-    body: `<rect width="${w}" height="${h}" fill="url(#${id})" mask="url(#${id}mask)" opacity=".5"/>`,
-  };
+/** The dotted grid is gone (it was a tell). Kept as a no-op so old call sites still work. */
+export function dotGrid() {
+  return { defs: "", body: "" };
 }
 
 export const monthIndex = (ym) => {

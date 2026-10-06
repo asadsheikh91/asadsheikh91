@@ -2,46 +2,43 @@
 <title id="t">Featured repositories</title>
 <desc id="d">cascade-payments, C#, last push 23 Sept 2026. influence, JavaScript, last push 15 May 2026. VeriLoom, TypeScript, last push 23 Apr 2026. vehicle-watch, Python, last push 22 Apr 2026</desc>
 <defs>
-  <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8b7cff"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
-  <linearGradient id="brandV" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8b7cff"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
-  <linearGradient id="card" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#171730"/><stop offset="1" stop-color="#0e0e1c"/></linearGradient>
-  <filter id="blur40" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="40"/></filter>
-  <filter id="blur20" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="20"/></filter>
-  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-  <clipPath id="clip"><rect width="830" height="282" rx="16"/></clipPath>
+  <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#b8431f"/><stop offset="1" stop-color="#b8431f"/></linearGradient>
+  <linearGradient id="card" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbf8f1"/><stop offset="1" stop-color="#fbf8f1"/></linearGradient>
+  <filter id="glow"><feMerge><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <clipPath id="clip"><rect width="830" height="282" rx="6"/></clipPath>
   
 </defs>
 <style>
-  text{text-rendering:geometricPrecision}
+  text{text-rendering:optimizeLegibility}
   @media (prefers-reduced-motion: reduce){*{animation:none !important}}
 </style>
 <g clip-path="url(#clip)">
-<rect width="830" height="282" fill="#0a0a14"/>
-<text x="24" y="34" font-size="17" fill="#eceaff" font-weight="800" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">Featured public repositories, newest push first</text>
-  <rect x="24" y="58" width="782" height="38" rx="10" fill="#ffffff08" stroke="#ffffff12"/>
+<rect width="830" height="282" fill="#f3eee3"/>
+<text x="24" y="34" font-size="17" fill="#1d1c1a" font-weight="800" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1">Featured public repositories, newest push first</text>
+  <rect x="24" y="58" width="782" height="38" rx="3" fill="url(#card)" stroke="#d6ccb8"/>
   <circle cx="46" cy="77" r="5" fill="#9b4f96"/>
-  <text x="62" y="82" font-size="14" fill="#eceaff" font-weight="700" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">cascade-payments</text>
-  <text x="318" y="82" font-size="12" fill="#a09ec0" font-weight="400" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="start" opacity="1">C#</text>
-  <text x="450" y="82" font-size="12" fill="#6d6b8f" font-weight="400" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="start" opacity="1">first commit Sept 2026</text>
-  <text x="790" y="82" font-size="12" fill="#22d3ee" font-weight="400" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="end" opacity="1">last push 23 Sept 2026</text>
-  <rect x="24" y="104" width="782" height="38" rx="10" fill="#ffffff08" stroke="#ffffff12"/>
+  <text x="62" y="82" font-size="14" fill="#1d1c1a" font-weight="700" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1">cascade-payments</text>
+  <text x="318" y="82" font-size="12" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">C#</text>
+  <text x="450" y="82" font-size="12" fill="#70685b" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">first commit Sept 2026</text>
+  <text x="790" y="82" font-size="12" fill="#b8431f" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="end" opacity="1">last push 23 Sept 2026</text>
+  <rect x="24" y="104" width="782" height="38" rx="3" fill="url(#card)" stroke="#d6ccb8"/>
   <circle cx="46" cy="123" r="5" fill="#f1e05a"/>
-  <text x="62" y="128" font-size="14" fill="#eceaff" font-weight="700" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">influence</text>
-  <text x="318" y="128" font-size="12" fill="#a09ec0" font-weight="400" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="start" opacity="1">JavaScript</text>
-  <text x="450" y="128" font-size="12" fill="#6d6b8f" font-weight="400" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="start" opacity="1">first commit May 2026</text>
-  <text x="790" y="128" font-size="12" fill="#22d3ee" font-weight="400" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="end" opacity="1">last push 15 May 2026</text>
-  <rect x="24" y="150" width="782" height="38" rx="10" fill="#ffffff08" stroke="#ffffff12"/>
+  <text x="62" y="128" font-size="14" fill="#1d1c1a" font-weight="700" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1">influence</text>
+  <text x="318" y="128" font-size="12" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">JavaScript</text>
+  <text x="450" y="128" font-size="12" fill="#70685b" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">first commit May 2026</text>
+  <text x="790" y="128" font-size="12" fill="#b8431f" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="end" opacity="1">last push 15 May 2026</text>
+  <rect x="24" y="150" width="782" height="38" rx="3" fill="url(#card)" stroke="#d6ccb8"/>
   <circle cx="46" cy="169" r="5" fill="#3178c6"/>
-  <text x="62" y="174" font-size="14" fill="#eceaff" font-weight="700" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">VeriLoom</text>
-  <text x="318" y="174" font-size="12" fill="#a09ec0" font-weight="400" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="start" opacity="1">TypeScript</text>
-  <text x="450" y="174" font-size="12" fill="#6d6b8f" font-weight="400" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="start" opacity="1">first commit Mar 2026</text>
-  <text x="790" y="174" font-size="12" fill="#22d3ee" font-weight="400" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="end" opacity="1">last push 23 Apr 2026</text>
-  <rect x="24" y="196" width="782" height="38" rx="10" fill="#ffffff08" stroke="#ffffff12"/>
+  <text x="62" y="174" font-size="14" fill="#1d1c1a" font-weight="700" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1">VeriLoom</text>
+  <text x="318" y="174" font-size="12" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">TypeScript</text>
+  <text x="450" y="174" font-size="12" fill="#70685b" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">first commit Mar 2026</text>
+  <text x="790" y="174" font-size="12" fill="#b8431f" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="end" opacity="1">last push 23 Apr 2026</text>
+  <rect x="24" y="196" width="782" height="38" rx="3" fill="url(#card)" stroke="#d6ccb8"/>
   <circle cx="46" cy="215" r="5" fill="#3572a5"/>
-  <text x="62" y="220" font-size="14" fill="#eceaff" font-weight="700" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">vehicle-watch</text>
-  <text x="318" y="220" font-size="12" fill="#a09ec0" font-weight="400" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="start" opacity="1">Python</text>
-  <text x="450" y="220" font-size="12" fill="#6d6b8f" font-weight="400" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="start" opacity="1">first commit Apr 2026</text>
-  <text x="790" y="220" font-size="12" fill="#22d3ee" font-weight="400" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="end" opacity="1">last push 22 Apr 2026</text><text x="24" y="268" font-size="9.5" fill="#6d6b8f" font-weight="400" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="start" opacity="1">Straight from the GitHub API. Dates are first commit month and latest push.</text>
+  <text x="62" y="220" font-size="14" fill="#1d1c1a" font-weight="700" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1">vehicle-watch</text>
+  <text x="318" y="220" font-size="12" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">Python</text>
+  <text x="450" y="220" font-size="12" fill="#70685b" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">first commit Apr 2026</text>
+  <text x="790" y="220" font-size="12" fill="#b8431f" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="end" opacity="1">last push 22 Apr 2026</text><text x="24" y="268" font-size="9.5" fill="#70685b" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">Straight from the GitHub API. Dates are first commit month and latest push.</text>
 </g>
-<rect x=".5" y=".5" width="829" height="281" rx="16" fill="none" stroke="#ffffff1a"/>
+<rect x=".5" y=".5" width="829" height="281" rx="6" fill="none" stroke="#d6ccb8"/>
 </svg>

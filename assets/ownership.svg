@@ -2,113 +2,105 @@
 <title id="t">ParchiVisa architecture, owned end to end by one engineer</title>
 <desc id="d">A student uses the Next.js app, which calls a FastAPI service behind Cloudflare. The service runs a rules engine for four countries, retrieval plus an LLM that writes the narrative, a PostgreSQL and Redis data layer, a report rendered to web and PDF, and payment. It runs on AWS Lightsail and Sentry watches it. One engineer owns all of it.</desc>
 <defs>
-  <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8b7cff"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
-  <linearGradient id="brandV" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8b7cff"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
-  <linearGradient id="card" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#171730"/><stop offset="1" stop-color="#0e0e1c"/></linearGradient>
-  <filter id="blur40" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="40"/></filter>
-  <filter id="blur20" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="20"/></filter>
-  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-  <clipPath id="clip"><rect width="830" height="528" rx="18"/></clipPath>
-  <pattern id="ow" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1" fill="#ffffff" opacity="0.35"/></pattern>
-<radialGradient id="owfade" cx=".5" cy=".5" r=".75"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#000"/></radialGradient>
-<mask id="owmask"><rect width="830" height="528" fill="url(#owfade)"/></mask>
+  <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#b8431f"/><stop offset="1" stop-color="#b8431f"/></linearGradient>
+  <linearGradient id="card" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbf8f1"/><stop offset="1" stop-color="#fbf8f1"/></linearGradient>
+  <filter id="glow"><feMerge><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <clipPath id="clip"><rect width="830" height="528" rx="6"/></clipPath>
+  
 </defs>
 <style>
-  text{text-rendering:geometricPrecision}
+  text{text-rendering:optimizeLegibility}
   @media (prefers-reduced-motion: reduce){*{animation:none !important}}
 
-    .flow{stroke-dasharray:4 7;animation:fl 1.2s linear infinite}
+    .flow{stroke-dasharray:4 7;animation:fl 1.4s linear infinite}
     @keyframes fl{to{stroke-dashoffset:-22}}
-    .ring{animation:rg 6s ease-in-out infinite}
-    @keyframes rg{0%,100%{stroke-opacity:.35}50%{stroke-opacity:.9}}
-    .bx{animation:bx 5s ease-in-out infinite}
-    @keyframes bx{0%,100%{opacity:1}50%{opacity:.82}}
+    .ring{animation:rg 7s ease-in-out infinite}
+    @keyframes rg{0%,100%{stroke-opacity:.55}50%{stroke-opacity:1}}
   </style>
 <g clip-path="url(#clip)">
-<rect width="830" height="528" fill="#0a0a14"/>
+<rect width="830" height="528" fill="#f3eee3"/>
 
-  <rect width="830" height="528" fill="url(#ow)" mask="url(#owmask)" opacity=".5"/>
   
-  <text x="24" y="40" font-size="22" fill="#eceaff" font-weight="800" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">ParchiVisa, drawn as the system it is</text>
-  <text x="24" y="64" font-size="12.5" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">Boxes are from the public case study. The ring is the point: I designed, built, deployed and run every one of them.</text>
+  <text x="24" y="42" font-size="25" fill="#1d1c1a" font-weight="700" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1">ParchiVisa, drawn as the system it is</text>
+  <text x="24" y="66" font-size="12.5" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">Boxes are from the public case study. The ring is the point: I designed, built, deployed and run every one of them.</text>
   
-  <rect class="ring" x="22" y="100" width="786" height="406" rx="20" fill="none" stroke="#8b7cff" stroke-opacity=".7" stroke-width="1.5" stroke-dasharray="7 6"/>
-  <rect x="38" y="90" width="196" height="22" rx="11" fill="#0a0a14" stroke="#8b7cff" stroke-opacity=".7"/>
-  <text x="136" y="105" font-size="10.5" fill="#8b7cff" font-weight="400" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" text-anchor="middle" opacity="1" letter-spacing="1.8">OWNED BY ONE ENGINEER</text>
-  <line class="flow" x1="216" y1="172" x2="234" y2="172" stroke="url(#brand)" stroke-width="2"/><path d="M230 168 L236 172 L230 176" fill="none" stroke="#22d3ee" stroke-width="1.6"/><line class="flow" x1="410" y1="172" x2="428" y2="172" stroke="url(#brand)" stroke-width="2"/><path d="M424 168 L430 172 L424 176" fill="none" stroke="#22d3ee" stroke-width="1.6"/><line class="flow" x1="604" y1="172" x2="622" y2="172" stroke="url(#brand)" stroke-width="2"/><path d="M618 168 L624 172 L618 176" fill="none" stroke="#22d3ee" stroke-width="1.6"/>
+  <rect class="ring" x="22" y="100" width="786" height="410" rx="6" fill="none" stroke="#2d4b6e" stroke-width="1.6" stroke-dasharray="7 6"/>
+  <rect x="38" y="89" width="200" height="22" rx="2" fill="#f3eee3"/>
+  <text x="138" y="105" font-size="13.5" fill="#2d4b6e" font-weight="700" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="middle" opacity="1" font-style="italic">Owned by one engineer</text>
+  <line class="flow" x1="216" y1="172" x2="234" y2="172" stroke="#b8431f" stroke-width="1.8"/><path d="M230 168 L236 172 L230 176" fill="none" stroke="#b8431f" stroke-width="1.6"/><line class="flow" x1="410" y1="172" x2="428" y2="172" stroke="#b8431f" stroke-width="1.8"/><path d="M424 168 L430 172 L424 176" fill="none" stroke="#b8431f" stroke-width="1.6"/><line class="flow" x1="604" y1="172" x2="622" y2="172" stroke="#b8431f" stroke-width="1.8"/><path d="M618 168 L624 172 L618 176" fill="none" stroke="#b8431f" stroke-width="1.6"/>
   
-  <path class="flow" d="M711 216 L711 242 L113 242" fill="none" stroke="url(#brand)" stroke-width="2"/>
-  <path class="flow" d="M113 242 L113 274" fill="none" stroke="url(#brand)" stroke-width="2"/><path class="flow" d="M266 242 L266 274" fill="none" stroke="url(#brand)" stroke-width="2"/><path class="flow" d="M419 242 L419 274" fill="none" stroke="url(#brand)" stroke-width="2"/><path class="flow" d="M572 242 L572 274" fill="none" stroke="url(#brand)" stroke-width="2"/><path class="flow" d="M725 242 L725 274" fill="none" stroke="url(#brand)" stroke-width="2"/>
+  <path class="flow" d="M711 216 L711 246 L113 246" fill="none" stroke="#b8431f" stroke-width="1.8"/>
+  <path class="flow" d="M113 246 L113 274" fill="none" stroke="#b8431f" stroke-width="1.8"/><path class="flow" d="M266 246 L266 274" fill="none" stroke="#b8431f" stroke-width="1.8"/><path class="flow" d="M419 246 L419 274" fill="none" stroke="#b8431f" stroke-width="1.8"/><path class="flow" d="M572 246 L572 274" fill="none" stroke="#b8431f" stroke-width="1.8"/><path class="flow" d="M725 246 L725 274" fill="none" stroke="#b8431f" stroke-width="1.8"/>
   
-  <g class="bx" style="animation-delay:0s">
-    <rect x="44" y="128" width="170" height="88" rx="12" fill="url(#card)" stroke="#6d6b8f" stroke-opacity=".5"/>
-    <rect x="44" y="128" width="170" height="3" rx="1.5" fill="#6d6b8f"/>
-    <text x="58" y="156" font-size="14.5" fill="#eceaff" font-weight="700" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">Student</text>
-    <text x="58" y="174.0" font-size="11" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">Opens the app in a</text><text x="58" y="189.2" font-size="11" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">browser</text>
+  <g>
+    <rect x="44" y="128" width="170" height="88" rx="4" fill="url(#card)" stroke="#d6ccb8"/>
+    <rect x="44" y="128" width="170" height="3" fill="#70685b"/>
+    <text x="58" y="157" font-size="15" fill="#1d1c1a" font-weight="700" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1">Student</text>
+    <text x="58" y="176.0" font-size="11.5" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">Opens the app in a</text><text x="58" y="191.9" font-size="11.5" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">browser</text>
   </g>
-  <g class="bx" style="animation-delay:0.5s">
-    <rect x="238" y="128" width="170" height="88" rx="12" fill="url(#card)" stroke="#8b7cff" stroke-opacity=".5"/>
-    <rect x="238" y="128" width="170" height="3" rx="1.5" fill="#8b7cff"/>
-    <text x="252" y="156" font-size="14.5" fill="#eceaff" font-weight="700" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">Next.js</text>
-    <text x="252" y="174.0" font-size="11" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">TypeScript. Clerk</text><text x="252" y="189.2" font-size="11" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">sign-in. Intake and</text><text x="252" y="204.4" font-size="11" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">report pages</text>
+  <g>
+    <rect x="238" y="128" width="170" height="88" rx="4" fill="url(#card)" stroke="#d6ccb8"/>
+    <rect x="238" y="128" width="170" height="3" fill="#2d4b6e"/>
+    <text x="252" y="157" font-size="15" fill="#1d1c1a" font-weight="700" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1">Next.js</text>
+    <text x="252" y="176.0" font-size="11.5" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">TypeScript. Clerk</text><text x="252" y="191.9" font-size="11.5" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">sign-in. Intake and</text><text x="252" y="207.7" font-size="11.5" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">report pages</text>
   </g>
-  <g class="bx" style="animation-delay:1s">
-    <rect x="432" y="128" width="170" height="88" rx="12" fill="url(#card)" stroke="#fbbf24" stroke-opacity=".5"/>
-    <rect x="432" y="128" width="170" height="3" rx="1.5" fill="#fbbf24"/>
-    <text x="446" y="156" font-size="14.5" fill="#eceaff" font-weight="700" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">Cloudflare</text>
-    <text x="446" y="174.0" font-size="11" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">Sits in front of the</text><text x="446" y="189.2" font-size="11" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">API</text>
+  <g>
+    <rect x="432" y="128" width="170" height="88" rx="4" fill="url(#card)" stroke="#d6ccb8"/>
+    <rect x="432" y="128" width="170" height="3" fill="#a5701a"/>
+    <text x="446" y="157" font-size="15" fill="#1d1c1a" font-weight="700" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1">Cloudflare</text>
+    <text x="446" y="176.0" font-size="11.5" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">Sits in front of the</text><text x="446" y="191.9" font-size="11.5" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">API</text>
   </g>
-  <g class="bx" style="animation-delay:1.5s">
-    <rect x="626" y="128" width="170" height="88" rx="12" fill="url(#card)" stroke="#22d3ee" stroke-opacity=".5"/>
-    <rect x="626" y="128" width="170" height="3" rx="1.5" fill="#22d3ee"/>
-    <text x="640" y="156" font-size="14.5" fill="#eceaff" font-weight="700" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">FastAPI</text>
-    <text x="640" y="174.0" font-size="11" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">The service everything</text><text x="640" y="189.2" font-size="11" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">else hangs off</text>
-  </g>
-  
-  <g class="bx" style="animation-delay:0.2s">
-    <rect x="44" y="276" width="138" height="138" rx="12" fill="url(#card)" stroke="#8b7cff" stroke-opacity=".5"/>
-    <rect x="44" y="276" width="138" height="3" rx="1.5" fill="#8b7cff"/>
-    <text x="58" y="304" font-size="14" fill="#eceaff" font-weight="700" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">Rules engine</text>
-    <text x="58" y="322.0" font-size="11" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">UK, Australia,</text><text x="58" y="337.2" font-size="11" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">Canada, USA. Rules</text><text x="58" y="352.4" font-size="11" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">kept as data. It</text><text x="58" y="367.5" font-size="11" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">decides the</text><text x="58" y="382.7" font-size="11" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">verdict.</text>
-  </g>
-  <g class="bx" style="animation-delay:0.7s">
-    <rect x="197" y="276" width="138" height="138" rx="12" fill="url(#card)" stroke="#f472b6" stroke-opacity=".5"/>
-    <rect x="197" y="276" width="138" height="3" rx="1.5" fill="#f472b6"/>
-    <text x="211" y="304" font-size="13.5" fill="#eceaff" font-weight="700" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">Retrieval + LLM</text>
-    <text x="211" y="322.0" font-size="11" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">Official</text><text x="211" y="337.2" font-size="11" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">requirements in, a</text><text x="211" y="352.4" font-size="11" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">narrative out. It</text><text x="211" y="367.5" font-size="11" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">cannot change the</text><text x="211" y="382.7" font-size="11" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">verdict.</text>
-  </g>
-  <g class="bx" style="animation-delay:1.2s">
-    <rect x="350" y="276" width="138" height="138" rx="12" fill="url(#card)" stroke="#34d399" stroke-opacity=".5"/>
-    <rect x="350" y="276" width="138" height="3" rx="1.5" fill="#34d399"/>
-    <text x="364" y="304" font-size="14" fill="#eceaff" font-weight="700" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">Data layer</text>
-    <text x="364" y="322.0" font-size="11" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">PostgreSQL and</text><text x="364" y="337.2" font-size="11" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">Redis. I designed</text><text x="364" y="352.4" font-size="11" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">the schema.</text>
-  </g>
-  <g class="bx" style="animation-delay:1.7s">
-    <rect x="503" y="276" width="138" height="138" rx="12" fill="url(#card)" stroke="#22d3ee" stroke-opacity=".5"/>
-    <rect x="503" y="276" width="138" height="3" rx="1.5" fill="#22d3ee"/>
-    <text x="517" y="304" font-size="14" fill="#eceaff" font-weight="700" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">Report</text>
-    <text x="517" y="322.0" font-size="11" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">One React</text><text x="517" y="337.2" font-size="11" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">template, rendered</text><text x="517" y="352.4" font-size="11" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">to web and PDF</text><text x="517" y="367.5" font-size="11" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">with headless</text><text x="517" y="382.7" font-size="11" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">Playwright.</text>
-  </g>
-  <g class="bx" style="animation-delay:2.2s">
-    <rect x="656" y="276" width="138" height="138" rx="12" fill="url(#card)" stroke="#fbbf24" stroke-opacity=".5"/>
-    <rect x="656" y="276" width="138" height="3" rx="1.5" fill="#fbbf24"/>
-    <text x="670" y="304" font-size="14" fill="#eceaff" font-weight="700" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">Payment</text>
-    <text x="670" y="322.0" font-size="11" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">Lives on the same</text><text x="670" y="337.2" font-size="11" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">deploy as intake,</text><text x="670" y="352.4" font-size="11" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">scoring and PDF.</text>
+  <g>
+    <rect x="626" y="128" width="170" height="88" rx="4" fill="url(#card)" stroke="#d6ccb8"/>
+    <rect x="626" y="128" width="170" height="3" fill="#b8431f"/>
+    <text x="640" y="157" font-size="15" fill="#1d1c1a" font-weight="700" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1">FastAPI</text>
+    <text x="640" y="176.0" font-size="11.5" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">The service everything</text><text x="640" y="191.9" font-size="11.5" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">else hangs off</text>
   </g>
   
   <g>
-    <rect x="44" y="438" width="358" height="48" rx="12" fill="#fbbf24" fill-opacity=".08" stroke="#fbbf24" stroke-opacity=".5" stroke-dasharray="5 4"/>
-    <text x="60" y="459" font-size="13.5" fill="#eceaff" font-weight="700" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">AWS Lightsail</text>
-    <text x="60" y="476" font-size="11" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">The API and the data run here, behind Cloudflare.</text>
+    <rect x="44" y="276" width="138" height="138" rx="4" fill="url(#card)" stroke="#d6ccb8"/>
+    <rect x="44" y="276" width="138" height="3" fill="#2d4b6e"/>
+    <text x="58" y="305" font-size="14" fill="#1d1c1a" font-weight="700" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1">Rules engine</text>
+    <text x="58" y="324.0" font-size="11.5" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">UK, Australia,</text><text x="58" y="339.9" font-size="11.5" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">Canada, USA.</text><text x="58" y="355.7" font-size="11.5" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">Rules kept as</text><text x="58" y="371.6" font-size="11.5" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">data. It decides</text><text x="58" y="387.5" font-size="11.5" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">the verdict.</text>
   </g>
   <g>
-    <rect x="418" y="438" width="370" height="48" rx="12" fill="#fb7185" fill-opacity=".08" stroke="#fb7185" stroke-opacity=".5" stroke-dasharray="5 4"/>
-    <text x="434" y="459" font-size="13.5" fill="#eceaff" font-weight="700" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">Sentry</text>
-    <text x="434" y="476" font-size="11" fill="#a09ec0" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" text-anchor="start" opacity="1">Watching for errors, so I hear about a failure first.</text>
+    <rect x="197" y="276" width="138" height="138" rx="4" fill="url(#card)" stroke="#d6ccb8"/>
+    <rect x="197" y="276" width="138" height="3" fill="#7a3b5e"/>
+    <text x="211" y="305" font-size="13.5" fill="#1d1c1a" font-weight="700" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1">Retrieval + LLM</text>
+    <text x="211" y="324.0" font-size="11.5" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">Official</text><text x="211" y="339.9" font-size="11.5" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">requirements in,</text><text x="211" y="355.7" font-size="11.5" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">a narrative out.</text><text x="211" y="371.6" font-size="11.5" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">It cannot change</text><text x="211" y="387.5" font-size="11.5" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">the verdict.</text>
   </g>
-  <circle r="4" fill="#22d3ee" filter="url(#glow)"><animateMotion dur="1.8s" begin="0s" repeatCount="indefinite" path="M216 172 L234 172"/></circle><circle r="4" fill="#22d3ee" filter="url(#glow)"><animateMotion dur="1.8s" begin="0.6s" repeatCount="indefinite" path="M410 172 L428 172"/></circle><circle r="4" fill="#22d3ee" filter="url(#glow)"><animateMotion dur="1.8s" begin="1.2s" repeatCount="indefinite" path="M604 172 L622 172"/></circle>
-  <circle r="4" fill="#22d3ee" filter="url(#glow)"><animateMotion dur="3.4s" repeatCount="indefinite" path="M711 216 L711 242 L419 242 L419 274"/></circle>
+  <g>
+    <rect x="350" y="276" width="138" height="138" rx="4" fill="url(#card)" stroke="#d6ccb8"/>
+    <rect x="350" y="276" width="138" height="3" fill="#2f6b4f"/>
+    <text x="364" y="305" font-size="14" fill="#1d1c1a" font-weight="700" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1">Data layer</text>
+    <text x="364" y="324.0" font-size="11.5" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">PostgreSQL and</text><text x="364" y="339.9" font-size="11.5" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">Redis. I designed</text><text x="364" y="355.7" font-size="11.5" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">the schema.</text>
+  </g>
+  <g>
+    <rect x="503" y="276" width="138" height="138" rx="4" fill="url(#card)" stroke="#d6ccb8"/>
+    <rect x="503" y="276" width="138" height="3" fill="#b8431f"/>
+    <text x="517" y="305" font-size="14" fill="#1d1c1a" font-weight="700" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1">Report</text>
+    <text x="517" y="324.0" font-size="11.5" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">One React</text><text x="517" y="339.9" font-size="11.5" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">template,</text><text x="517" y="355.7" font-size="11.5" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">rendered to web</text><text x="517" y="371.6" font-size="11.5" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">and PDF with</text><text x="517" y="387.5" font-size="11.5" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">headless</text><text x="517" y="403.4" font-size="11.5" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">Playwright.</text>
+  </g>
+  <g>
+    <rect x="656" y="276" width="138" height="138" rx="4" fill="url(#card)" stroke="#d6ccb8"/>
+    <rect x="656" y="276" width="138" height="3" fill="#a5701a"/>
+    <text x="670" y="305" font-size="14" fill="#1d1c1a" font-weight="700" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1">Payment</text>
+    <text x="670" y="324.0" font-size="11.5" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">Lives on the same</text><text x="670" y="339.9" font-size="11.5" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">deploy as intake,</text><text x="670" y="355.7" font-size="11.5" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">scoring and PDF.</text>
+  </g>
+  
+  <g>
+    <rect x="44" y="440" width="358" height="50" rx="4" fill="#a5701a12" stroke="#a5701a" stroke-opacity=".55" stroke-dasharray="5 4"/>
+    <text x="60" y="462" font-size="14.5" fill="#1d1c1a" font-weight="700" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1">AWS Lightsail</text>
+    <text x="60" y="479" font-size="11.5" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">The API and the data run here, behind Cloudflare.</text>
+  </g>
+  <g>
+    <rect x="418" y="440" width="370" height="50" rx="4" fill="#a6323212" stroke="#a63232" stroke-opacity=".55" stroke-dasharray="5 4"/>
+    <text x="434" y="462" font-size="14.5" fill="#1d1c1a" font-weight="700" font-family="Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','Times New Roman',serif" text-anchor="start" opacity="1">Sentry</text>
+    <text x="434" y="479" font-size="11.5" fill="#554f45" font-weight="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" text-anchor="start" opacity="1">Watching for errors, so I hear about a failure first.</text>
+  </g>
+  <circle r="4" fill="#b8431f"><animateMotion dur="1.8s" begin="0s" repeatCount="indefinite" path="M216 172 L234 172"/></circle><circle r="4" fill="#b8431f"><animateMotion dur="1.8s" begin="0.6s" repeatCount="indefinite" path="M410 172 L428 172"/></circle><circle r="4" fill="#b8431f"><animateMotion dur="1.8s" begin="1.2s" repeatCount="indefinite" path="M604 172 L622 172"/></circle>
+  <circle r="4" fill="#b8431f"><animateMotion dur="3.4s" repeatCount="indefinite" path="M711 216 L711 246 L419 246 L419 274"/></circle>
 
 </g>
-<rect x=".5" y=".5" width="829" height="527" rx="18" fill="none" stroke="#ffffff1a"/>
+<rect x=".5" y=".5" width="829" height="527" rx="6" fill="none" stroke="#d6ccb8"/>
 </svg>

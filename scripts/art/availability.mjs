@@ -39,14 +39,14 @@ export function availability(p) {
       const s = (startUtc + z.off + 24) % 24;
       const e = (s + span) % 24;
       const ov = overlap(s, span);
-      const seg = (a, b) => `<rect class="band" x="${hx(a)}" y="${y + 8}" width="${hx(b) - hx(a)}" height="26" rx="6" fill="url(#brand)" opacity=".9"/>`;
+      const seg = (a, b) => `<rect class="band" x="${hx(a)}" y="${y + 8}" width="${hx(b) - hx(a)}" height="26" rx="3" fill="url(#brand)" opacity=".9"/>`;
       const bands = e > s || e === 0 ? seg(s, e === 0 ? 24 : e) : seg(s, 24) + seg(0, e);
       return `
   <g>
-    ${t(z.name, 24, y + 25, { fs: 13.5, weight: z.home ? 800 : 600, fill: z.home ? C.cyan : C.text })}
+    ${t(z.name, 24, y + 25, { fs: 13.5, weight: z.home ? 800 : 600, fill: z.home ? C.rust : C.text })}
     ${t(`${z.tag}, UTC${z.off >= 0 ? "+" : "-"}${Math.abs(z.off)}`, 24, y + 41, { fs: 10, mono: true, fill: C.dim })}
-    <rect x="${barX}" y="${y + 8}" width="${barW}" height="26" rx="6" fill="#ffffff0b" stroke="#ffffff14"/>
-    <rect x="${hx(9)}" y="${y + 5}" width="${hx(17) - hx(9)}" height="32" rx="6" fill="none" stroke="${C.amber}" stroke-opacity=".55" stroke-dasharray="4 3"/>
+    <rect x="${barX}" y="${y + 8}" width="${barW}" height="26" rx="3" fill="#1d1c1a0b" stroke="#1d1c1a14"/>
+    <rect x="${hx(9)}" y="${y + 5}" width="${hx(17) - hx(9)}" height="32" rx="3" fill="none" stroke="${C.ochre}" stroke-opacity=".55" stroke-dasharray="4 3"/>
     ${bands}
     ${t(`${fmt(s)} to ${fmt(e)}`, hx(24) + 14, y + 26, { fs: 12, mono: true, fill: C.text, weight: 600 })}
     ${t(ov ? `${ov} h of your 9 to 5` : "your evening", hx(24) + 14, y + 41, { fs: 10, mono: true, fill: ov ? C.green : C.dim })}
@@ -55,12 +55,12 @@ export function availability(p) {
     .join("");
 
   const axis = [0, 6, 12, 18, 24]
-    .map((hr) => `<line x1="${hx(hr)}" y1="${top - 6}" x2="${hx(hr)}" y2="${top + zones.length * rowH - 10}" stroke="#ffffff10"/>${t(fmt(hr), hx(hr), top - 14, { fs: 10, mono: true, fill: C.dim, anchor: "middle" })}`)
+    .map((hr) => `<line x1="${hx(hr)}" y1="${top - 6}" x2="${hx(hr)}" y2="${top + zones.length * rowH - 10}" stroke="#1d1c1a10"/>${t(fmt(hr), hx(hr), top - 14, { fs: 10, mono: true, fill: C.dim, anchor: "middle" })}`)
     .join("");
 
   const head = `
   ${t("My core hours: 5 pm to 3 am Islamabad time", 24, 40, { fs: 22, weight: 800, fill: C.text })}
-  ${t("Each row is that city's own clock. Amber dashes are a 9 to 5 day. Core hours, not limits.", 24, 62, { fs: 12.5, fill: C.muted })}`;
+  ${t("Each row is that city's own clock. The dashed outline is a 9 to 5 day. Core hours, not limits.", 24, 62, { fs: 12.5, fill: C.muted })}`;
   const foot = `${t("Standard time. Daylight saving moves the western rows by one hour. Cities listed are examples, not a limit.", 24, h - 18, { fs: 10, mono: true, fill: C.dim })}`;
 
   const css = `
