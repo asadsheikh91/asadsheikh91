@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-12T11:26:53.285Z",
+ "generatedAt": "2026-11-13T11:10:14.491Z",
  "calendar": {
   "source": "html",
   "days": [
@@ -1845,6 +1845,11 @@
    },
    {
     "date": "2026-11-12",
+    "level": 4,
+    "count": 7
+   },
+   {
+    "date": "2026-11-13",
     "level": 0,
     "count": 0
    }
@@ -1852,9 +1857,17 @@
  },
  "repos": [
   {
+   "name": "q-shield",
+   "language": "Python",
+   "pushed": "2026-11-12T18:19:20Z",
+   "created": "2026-11-12T16:55:38Z",
+   "description": "Q-SHIELD: constraint-preserving QAOA (Dicke + XY mixer + CVaR) in Qiskit for network-aware Fall Armyworm containment — Qiskit Fall Fest 2026, Agriculture",
+   "url": "https://github.com/asadsheikh91/q-shield"
+  },
+  {
    "name": "asadsheikh91",
    "language": "JavaScript",
-   "pushed": "2026-11-11T11:08:12Z",
+   "pushed": "2026-11-12T11:26:54Z",
    "created": "2026-10-06T08:56:22Z",
    "description": null,
    "url": "https://github.com/asadsheikh91/asadsheikh91"
